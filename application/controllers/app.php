@@ -37,7 +37,7 @@ class App extends CI_Controller {
 	public function voevents() {
 
 		$this->load->model("xmlmodel");
-		$this->xmlmodel->voevents();
+		$voevents = $this->xmlmodel->voevents();
 
 	}
 
