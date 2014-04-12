@@ -53,6 +53,13 @@ class App extends CI_Controller {
 
 	}
 
+	public function weather() {
+
+		$weather_url = 'api.openweathermap.org/data/2.5/forecast?lat=35&lon=139';
+		$json2 = json_decode($weather_url)
+		print_r($json2);
+	}
+
 }
 
 /* End of file welcome.php */
