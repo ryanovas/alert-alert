@@ -36,20 +36,17 @@ class App extends CI_Controller {
 
 	public function voevents() {
 
-		$url = 'http://skyalert.org/event/xml/1357860/';
-
 		$this->load->model("xmlmodel");
+		$this->xmlmodel->voevents();
 
-		//$this->xmlmodel->voevents($url);
+	}
 
-		$json = $this->xmlmodel->voevents($url);
-		print_r($json);
+	public function updateDB($pass) {
 
-		$voarray = json_decode($json, true);
-		/*echo $voarray['@attributes']['role'];
-		echo $voarray['Who']['AuthorIVORN'];
-		echo $voarray['Description'];
-		echo $voarray['How']['Description'];*/
+		if ($pass === 'SpaceAppsTO2014') {
+			$this->load->model("xmlmodel");
+			$this->xmlmodel->updateDB();
+		}
 
 	}
 
