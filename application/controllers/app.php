@@ -34,7 +34,7 @@ class App extends CI_Controller {
 
 	}
 
-	public function parse_xml() {
+	public function voevents() {
 
 		$this->load->model("xmlmodel");
 		$this->xmlmodel->voevents();
