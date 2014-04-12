@@ -30,7 +30,23 @@ class App extends CI_Controller {
 
 	public function home() {
 
-		echo 'hello world';
+		echo 'hello world eh';
+
+	}
+
+	public function voevents() {
+
+		$this->load->model("xmlmodel");
+		$this->xmlmodel->voevents();
+
+	}
+
+	public function updateDB($pass) {
+
+		if ($pass === 'SpaceAppsTO2014') {
+			$this->load->model("xmlmodel");
+			$this->xmlmodel->updateDB();
+		}
 
 	}
 
