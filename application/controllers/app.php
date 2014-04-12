@@ -50,7 +50,21 @@ class App extends CI_Controller {
 
 	}
 
+	public function weather() {
+
+		$this->load->model('weather_model');
+		$weather = $this->weather_model->getWeather();
+
+	}
+
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+
+
+
+
+
+
+
+
+
