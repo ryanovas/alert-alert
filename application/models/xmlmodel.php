@@ -2,23 +2,27 @@
 	
 class Xmlmodel extends CI_Model {
 		
-	public function voevents() {
-		
-		$url = 'http://skyalert.org/feeds/290/';
+		public function voevents($url) {
+			
+			// XML URL
+			//$url = 'http://skyalert.org/event/xml/1357860/';			
+			
+			// Get file contents from URL
+			$fileContents = file_get_contents($url);
 
-		$fileContents = file_get_contents($url);
-		$fileContents = str_replace(array("\n", "\r", "\t"), '', $fileContents);
-		$fileContents = trim(str_replace('"', "'", $fileContents));
+			// Remove newlines, returns and tabs from file contents
+			$fileContents = str_replace(array("\n", "\r", "\t"), '', $fileContents);
 
-		$streamXML = simplexml_load_string($fileContents);	
-		$stream = json_encode($streamXML);	
+			// Replace double quotes with single quotes, and remove leading and trailing spaces
+			$fileContents = trim(str_replace('"', "'", $fileContents));
 
-		print_r($stream);
+			// Call simple_load_string() funciton
+			$simpleXml = simplexml_load_string($fileContents);	
 
-		// foreach ($stream->entry as $row) {
-		// 	echo '<pre>';
-		// 	var_dump($row);
-		// }
+			// Convert XML to JSON
+			$json = json_encode($simpleXml);
 
+			//print_r($json);
+			return $json;
+		}
 	}
-}
