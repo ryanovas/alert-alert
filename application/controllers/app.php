@@ -30,8 +30,14 @@ class App extends CI_Controller {
 
 	public function home() {
 
-		echo 'hello world';
+		echo 'hello world eh';
 
+	}
+
+	public function parse_xml() {
+
+		$this->load->model("xmlmodel");
+		$this->xmlmodel->voevents();
 	}
 
 }
