@@ -8,17 +8,31 @@ class Weather_model extends CI_Model {
 		$ip = '207.219.69.239';
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		
-		return $details
+		return $details;
 
 	}
 
 	public function getWeather() {
 
 		$location = $this->getLocation();
+		$coordinates = explode(',', $location->loc);
 
-		// $weather_url = 'api.openweathermap.org/data/2.5/forecast?lat=35&lon=139';
-		// $json2 = json_decode($weather_url)
-		// print_r($json2);
+		$lat = $coordinates[0];
+		$long = $coordinates[1];
+
+		$weather_url = 'http://api.openweathermap.org/data/2.5/forecast?lat=' . $lat . '&lon=' . $long . '';
+		$response = file_get_contents($weather_url);
+
+		$forecast = json_decode($response);
+		$current = $forecast->list[0];
+
+		$data = array(
+			'temp' => $current->main->temp - 273.15,
+			'desc' => $current->weather[0]->description,
+			'clouds' => $current->clouds->all,
+		);
+
+		return $data;
 
 	}
 

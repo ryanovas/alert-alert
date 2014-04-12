@@ -55,11 +55,8 @@ class App extends CI_Controller {
 
 	public function weather() {
 
-		$weather_url = 'http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139';
-		$response = file_get_contents($weather_url);
-		//print_r($response);
 		$this->load->model('weather_model');
-		$this->weather_model->getWeather();
+		$weather = $this->weather_model->getWeather();
 
 	}
 
