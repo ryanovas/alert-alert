@@ -1,0 +1,57 @@
+body {
+	overflow: hidden;
+}
+
+.container {
+	display: block;
+	position: fixed;
+	top: 70px;
+	@include square(100%);
+	box-sizing: border-box;
+	// border: 1px solid yellow;
+
+	> ul {
+		display: inline;
+		position: absolute;
+		top: -28px;
+		right: 35%;
+		list-style-type: none;
+		font-size: 14px;
+		color: #40DBD9;
+		margin-left: 10px;
+		// border: 1px solid red;
+
+		> li {
+			display: inline;
+			margin-left: 10px;
+			&.active {
+				border-bottom: 1px solid #40DBD9;
+			}
+		}
+	}
+
+	> .displayCont {
+		display: inline-block;
+		position: absolute;
+		box-sizing: border-box;
+		@include size(65%,100%);
+		padding-top: 5px;
+		// border: 1px solid red;
+	}
+
+	> .feedCont {
+		display: inline-block;
+		position: absolute;
+		margin-top: 5px;
+		left: 65%;
+		box-sizing: border-box;
+		@include size(35%,100%);
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		// background-color: yellow;
+		// border: 1px solid green;
+	}
+}
+
