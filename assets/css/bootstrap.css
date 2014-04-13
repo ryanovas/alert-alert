@@ -360,6 +360,7 @@ body {
 .container > .feedCont {
   display: inline-block;
   position: absolute;
+  background-color: #B3D1FF;
   margin-top: 5px;
   left: 65%;
   box-sizing: border-box;
@@ -377,8 +378,12 @@ body {
   width: 98%;
   height: 200px;
   background-color: white;
-  border-radius: 4px;
-  margin: 4px auto;
+  margin: 6px auto;
+  box-shadow: 1px 1px 2px #888;
+  border-left: 7px solid #C75145;
+}
+.feedCard:nth-child(even) {
+  border-left: 7px solid #E4A268;
 }
 .feedCard > .imgCont {
   position: absolute;
@@ -387,6 +392,9 @@ body {
   margin: 10px;
   background-color: #E4A268;
 }
+.feedCard > .imgCont > img {
+  width: 100%;
+}
 .feedCard .cardHeader {
   position: relative;
   margin-left: 100px;
@@ -394,9 +402,16 @@ body {
 }
 .feedCard .cardHeader > h2 {
   margin: 4px 0 0 0;
+  color: #C75145;
 }
 .feedCard .cardHeader > p {
   margin: 0;
+}
+.feedCard .cardHeader > p:first-of-type {
+  font-weight: 700;
+}
+.feedCard .cardHeader > p:last-of-type {
+  font-style: italic;
 }
 .feedCard .coordinates {
   position: absolute;
@@ -405,18 +420,34 @@ body {
 }
 .feedCard .coordinates > ul {
   padding-left: 10px;
-  margin: 4px;
+  margin: 0px;
+  font-size: 10px;
   list-style-type: none;
+  width: 90px;
+}
+.feedCard .coordinates > ul > li:nth-child(odd) {
+  background-color: #EBCC88;
+  padding-left: 2px;
+}
+.feedCard .coordinates > ul > li:nth-child(even) {
+  background-color: #F5EBB6;
+  padding-left: 2px;
 }
 .feedCard .description {
   position: relative;
   margin-left: 100px;
   padding-right: 10px;
 }
+.feedCard .description > h4 {
+  margin-bottom: 0px;
+}
+.feedCard .description > p {
+  margin-top: 0px;
+}
 .feedCard .ivo {
   position: absolute;
   bottom: 4px;
-  left: 5px;
+  left: 100px;
   font-size: 10px;
   color: #415160;
   margin: 0;
@@ -424,8 +455,9 @@ body {
 .feedCard .timestamp {
   position: absolute;
   bottom: 4px;
-  right: 5px;
+  right: 10px;
   font-size: 10px;
+  color: #415160;
   margin: 0;
 }
 

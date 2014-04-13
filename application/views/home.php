@@ -74,10 +74,11 @@ header( 'Pragma: no-cache' );
 						</div>
 						<div class="coordinates">
 							<ul>
-								<li>RA: <?php echo substr($event['position'], 0, strpos($event['position'], ',')); ?></li><li>Dec: <?php echo substr($event['position'], strpos($event['position'], ',') + 1, strpos($event['position'], ' ')); ?></li><li>PosError: <?php echo substr($event['position'], strpos($event['position'], ' '), strlen($event['position'])); ?></li>
+								<li><strong>RA</strong></li><li><?php echo substr($event['position'], 0, strpos($event['position'], ',')); ?></li><li><strong>Dec</strong></li><li><?php echo 26.8128700 ?></li><li><strong>PosError</strong></li><li><?php echo substr($event['position'], strpos($event['position'], ' '), strlen($event['position'])); ?></li>
 							</ul>
 						</div>
 						<div class="description">
+							<h4>Description</h4>
 							<p><?php echo $event['desc']; ?></p>
 						</div>
 							<p class="ivo"><?php echo $key; ?></p>
