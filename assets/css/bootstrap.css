@@ -372,6 +372,37 @@ body {
   display: none;
 }
 
+.cloudCover {
+  width: 250px;
+  height: 80px;
+  background: #999;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.cloudCover p {
+  margin: 10px 0 8px 10px;
+}
+.cloudCover .visibilityBarCont {
+  margin: 0 0 10px 10px;
+  width: 228px;
+  height: 30px;
+  background: #ccc;
+  position: relative;
+}
+.cloudCover .visibilityBarCont .visibilityBar {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #F5EBB6;
+  text-align: center;
+}
+.cloudCover .visibilityBarCont .visibilityBar p {
+  margin: 6px 0 0 0;
+}
+
 .feedCard {
   display: block;
   position: relative;

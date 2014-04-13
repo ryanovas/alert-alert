@@ -56,3 +56,43 @@ body {
 	}
 }
 
+.cloudCover {
+
+	width: 250px;
+	height: 80px;
+	background: #999;
+	opacity: 0.9;
+
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+
+	p {
+		margin: 10px 0 8px 10px;
+	}
+
+	.visibilityBarCont {
+		margin: 0 0 10px 10px;
+		width: 228px;
+		height: 30px;
+		background: #ccc;
+		position: relative;
+
+		.visibilityBar {
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #F5EBB6;
+
+			text-align: center;
+
+			p {
+				margin: 6px 0 0 0;
+			}
+		}
+
+	}
+
+}
+

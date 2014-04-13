@@ -91,6 +91,21 @@ header( 'Pragma: no-cache' );
 	
 	</div>
 
+	<div class="cloudCover">
+		<p>Visibility Right Now</p>
+		<div class="visibilityBarCont"><?php 
+
+			if ($weather['visibility'] == 100) {
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>Full Visibility</p>'; 
+			}
+
+			else {
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar">'; 
+			}
+
+		?></div></div>
+	</div>
+
 </body>
 </html>
 
