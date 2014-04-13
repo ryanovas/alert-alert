@@ -67,7 +67,34 @@
 
 		?></div></div>
 	</div>
-
+	
+	<div class="share">
+	</div>
+	
+	<script>
+		jQuery.urlShortener.settings.apiKey='AIzaSyB5G9uHkh_xMaazDUV2loBWUpnuROvEiHA';
+	
+		jQuery.urlShortener({
+		    longUrl: window.location.href,
+		    success: function (shortUrl) {
+		        
+		        var text = 'SkyWatch via @SproutrTO';
+	
+	    		$('.share').share({
+	    			url: shortUrl,
+	    			text: text,
+	    			image: 'https://d72q7iu7osckw.cloudfront.net/images/sproutr.png',
+	    			button_text: 'Share this Question',
+	    			flyout: 'top center'
+	    		});
+	
+		    },
+		    error: function(err)
+		    {
+		        console.log(JSON.stringify(err));
+		    }
+		});
+	<script>
 
 
 

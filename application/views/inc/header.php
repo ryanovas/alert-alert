@@ -24,6 +24,7 @@ header( 'Pragma: no-cache' );
 	<?php echo '<link href="' . base_url() . 'assets/css/bootstrap.css?v1.1" rel="stylesheet" type="text/css">'; ?>
 
 	<?php echo '<script src="' . base_url() . 'assets/js/jquery-1.11.0.min.js"></script>'; ?>
+	<?php echo '<script src="' . base_url() . 'assets/js/share.min.js"></script>'; ?>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<?php 
 		if (isset($js)) {
