@@ -39,7 +39,8 @@ class App extends CI_Controller {
 		$data = array(
 			'weather' => $weather,
 			'voevents' => $voevents,
-			'main_content' => 'home.php'
+			'main_content' => 'home.php',
+			'js' => array('mapView.js')
 		);
 
 		$this->load->view('inc/template', $data);
