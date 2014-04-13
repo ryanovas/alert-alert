@@ -125,3 +125,11 @@ body {
 		}
 	}
 }
+
+#modalCover {
+	position: fixed;
+	z-index: 0;
+	@include square(100%);
+	background: #000;
+	opacity: 0;
+}

@@ -1,7 +1,44 @@
+	<div id="modalCover">
+	</div>
+
+	<div id="filterModal">
+		<h1>Filter by:</h1>
+
+		<div class="options">
+			<h3>EVENTS</h3>
+				<form>
+					<input type="checkbox" name="event" value="Supernova">Supernovae<br>
+					<input type="checkbox" name="event" value="Gamma-ray Bursts">Gamma-ray Bursts<br>
+					<input type="checkbox" name="event" value="Gravitational Microlensing">Gravitational Microlensing<br>
+					<input type="checkbox" name="event" value="Asteroids">Asteroids<br>
+					<input type="checkbox" name="event" value="Other">Other<br>
+				</form>
+			<h3>SOURCE</h3>
+				<form>
+					<input type="checkbox" name="Source" value="Astronomers Telegram">Astronomers Telegram<br>
+					<input type="checkbox" name="Source" value="Central Bureau for Astronomical Telegrams">Central Bureau for Astronomical Telegrams<br>
+					<input type="checkbox" name="Source" value="NASA GCN">NASA GCN<br>
+					<input type="checkbox" name="Source" value="GRB Coordinates Network">GRB Coordinates Network<br>
+					<input type="checkbox" name="Source" value="Other">Other<br>
+				</form>
+			<h3>DATE</h3>
+				<form action="demo_form.asp">
+				  From: <input type="date" name="from">
+				  To: <input type="date" name="to">
+				</form>
+		</div>
+
+		<div class="modalButtons">
+			<ul>
+				<li class="cancel">Cancel</li><li class="ok">Ok</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="container">
 
 		<ul class="filter">
-			<li>Filters</li><li>Subscribe</li>
+			<li><a id="filterLink" href="#filterModal">Filters</a></li><li>Subscribe</li>
 		</ul>
 
 		<div class="displayCont">
@@ -65,6 +102,19 @@
 		?></div></div>
 	</div>
 
+<script type="text/javascript">
+
+$(document).ready(function () {
+    //$('#dialog').dialog(); 
+    $('#filterLink').click(function () {
+        $('#filterModal').css('
+        	opacity: 1;
+        	z-index: 9999;');
+        return false;
+    });
+});
+
+</script>
 
 
 

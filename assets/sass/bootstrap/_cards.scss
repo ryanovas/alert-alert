@@ -111,4 +111,17 @@ ul.filter {
 	margin: 0;
 	color: #40DBD9;
 	font-style: text-underline;
+	z-index: 9999;
+
+	li:hover {
+		cursor: pointer;
+	}
+
+	a {
+		color: #40DBD9;
+		z-index: 9999;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
