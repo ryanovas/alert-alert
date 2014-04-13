@@ -31,7 +31,7 @@
 
 		var eventCircle;
 
-		function initialize() {
+		function mapinitialize() {
 		  // Create the map
 		  var mapOptions = {
 		    zoom: 3,
@@ -59,4 +59,4 @@
 		  }
 		}
 
-		google.maps.event.addDomListener(window, 'load', initialize);
+		google.maps.event.addDomListener(window, 'load', mapinitialize);

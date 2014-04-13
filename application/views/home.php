@@ -1,7 +1,7 @@
 	<div class="container">
 
 		<ul>
-			<li>Land</li><li>Sky</li><li>Schema</li>
+			<li id="land">Land</li><li id="sky">Sky</li><li>Schema</li>
 		</ul>
 		<ul class="filter">
 			<li>Filters</li><li>Subscribe</li>
