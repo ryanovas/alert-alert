@@ -5,6 +5,7 @@
 	height: 200px;
 	background-color: white;
 	margin: 6px auto;
+	z-index: 9998;
 	box-shadow: 1px 1px 2px #888;
 	border-left: 7px solid #C75145;
 
@@ -129,4 +130,5 @@ ul.filter {
 	cursor: pointer;
 	color: #40DBD9;
 	font-style: text-underline;
+	position: 9998;
 }

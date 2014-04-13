@@ -39,7 +39,7 @@ class Xmlmodel extends CI_Model {
 
 		}
 
-		private function xmltoarray($url) {
+		public function xmltoarray($url) {
 
 			// Get file contents from URL
 			$fileContents = file_get_contents($url);

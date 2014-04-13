@@ -1,3 +1,5 @@
+	<div class="share"></div>
+
 	<div class="container">
 
 		<ul class="filter">
@@ -91,9 +93,33 @@
 				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>' . $weather['visibility'] . '% Visibility</p>'; 
 			}
 
-		?></div></div>
+		?></div>
 	</div>
-
+	
+	<script>
+		jQuery.urlShortener.settings.apiKey='AIzaSyB5G9uHkh_xMaazDUV2loBWUpnuROvEiHA';
+	
+		jQuery.urlShortener({
+		    longUrl: window.location.href,
+		    success: function (shortUrl) {
+		        
+		        var text = 'See #cosmic events in real time via @SkyWatch!';
+	
+	    		$('.share').share({
+	    			url: shortUrl,
+	    			text: text,
+	    			image: 'https://d72q7iu7osckw.cloudfront.net/images/sproutr.png',
+	    			button_text: 'Share',
+	    			flyout: 'bottom left'
+	    		});
+	
+		    },
+		    error: function(err)
+		    {
+		        console.log(JSON.stringify(err));
+		    }
+		});
+	</script>
 
 
 

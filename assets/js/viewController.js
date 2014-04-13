@@ -232,27 +232,6 @@ $(document).ready(function() {
 			}
 
 
-	// SCHEMA VIEW
-
-			function schemainitialize(xml) {
-
-				$.ajax({
-				    type: 'GET',
-				    url: xml,
-				    processData: true,
-				    data: {},
-				    dataType: "json",
-				    success : function(data){
-				        
-				        var result = processData(data);
-				    	$('#map-canvas').html('<pre>' + result + '</pre>');
-
-				    }
-				});
-
-			}
-
-
 
 
 
@@ -268,7 +247,8 @@ $(document).ready(function() {
 	$('.schemaButton').click(function() {
 		
 		var xml = $(this).parent().find('.xmlLink').html();
-		schemainitialize(xml);
+		var win=window.open(xml, '_blank');
+		win.focus();
 
 	});
 
