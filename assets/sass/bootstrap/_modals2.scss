@@ -1,3 +1,5 @@
+
+
 #filterModal {
 	position: fixed;
 	@include size(400px,auto);
@@ -5,21 +7,9 @@
 	top: 100px;
 	left: -200px;
 	background: white;
-	border-radius: 10px;
 	z-index: 0;
 	padding-bottom: 70px;
 	opacity: 0;
-	&:before {
-		content: " ";
-		z-index: 9999;
-		border: 4px solid #C75145;
-		border-radius: 8px;
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		bottom: 5px;
-		left:5px;
-	}
 
 	> h1 {
 		margin-left: 15px;
@@ -67,11 +57,11 @@
 		}
 
 		.cancel {
-			background: red;
+			background: #C75145;
 		}
 
 		.ok {
-			background: green;
+			background: #415160;
 			margin-left: 15px; 
 		}
 	}

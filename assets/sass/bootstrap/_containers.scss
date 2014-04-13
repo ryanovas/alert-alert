@@ -8,6 +8,15 @@ body {
 	overflow: hidden;
 }
 
+a {
+	color: white !important;
+}
+
+a:hover {
+	outline: none;
+	text-decoration: none;
+}
+
 .container {
 	display: block;
 	position: fixed;
@@ -128,8 +137,67 @@ body {
 
 #modalCover {
 	position: fixed;
-	z-index: 0;
+	z-index: 998;
 	@include square(100%);
-	background: #000;
-	opacity: 0;
+	background: #333;
+	opacity: 0.8;
+	display: none;
+	pointer-events: none;
+}
+
+.cover {
+	display: block;
+	position: absolute;
+	top: 71px;
+	@include square(100%);
+	background: #fff url('../images/small.png') no-repeat fixed center;
+	border-top: 4px solid darken($brand-primary,20%);
+	// background: url('assets/images/small.png');
+}
+
+.welcome {
+	width: 45%;
+	height: 60%;
+	margin: 300px 0 0 50%;
+	text-align: right;
+
+	> h1 {
+		font-size: 3.4em;
+		color: #fff;
+		margin: 30px 0 0 0;
+	}
+
+	> h4 {
+		color: #F5EBB6;
+		font-size: 2em;
+		margin: 0 0 50px 0;
+	}
+
+	> .buttons {
+
+		> ul {
+			width: auto;
+			padding-left: 0;
+
+			> li {
+				display: inline;
+				font-size: 20px;
+				color: #fff;
+				padding: 15px;
+				border: 2px solid #fff;
+				border-radius: 10px;
+				margin: 0 auto;
+
+				&:last-of-type {
+					margin-left: 25px;
+				}
+
+				&:hover {
+					background: #fff;
+					color: #000;
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }

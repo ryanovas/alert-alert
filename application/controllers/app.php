@@ -30,6 +30,17 @@ class App extends CI_Controller {
 
 	public function home() {
 
+		$data = array(
+			'main_content' => 'home',
+			'current' => 'Home'
+		);
+
+		$this->load->view('inc/template', $data);
+
+	}
+
+	public function feed() {
+
 		$this->load->model('xmlmodel');
 		$voevents = $this->xmlmodel->voevents();
 
@@ -39,12 +50,31 @@ class App extends CI_Controller {
 		$data = array(
 			'weather' => $weather,
 			'voevents' => $voevents,
-			'main_content' => 'home.php',
+			'main_content' => 'feed',
+			'current' => 'Feed',
 			'js' => array('mapView.js', 'spaceView.js', 'viewController.js')
 		);
 
 		$this->load->view('inc/template', $data);
 
+	}
+
+	public function about() {
+		$data = array(
+			'main_content' => 'about',
+			'current' => 'About'
+		);
+
+		$this->load->view('inc/template', $data);
+	}
+
+	public function contact() {
+		$data = array(
+			'main_content' => 'contact',
+			'current' => 'Contact'
+		);
+
+		$this->load->view('inc/template', $data);
 	}
 
 	public function updateDB($pass) {

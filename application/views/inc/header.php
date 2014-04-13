@@ -38,8 +38,43 @@ header( 'Pragma: no-cache' );
 <body>
 
 	<nav class="navbar">
-		<img src="assets/images/logo.png">
+		<?php echo anchor('app/home', '<img src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch">'); ?>
 		<ul class="navbar-nav">
-			<li class="active">Feed</li><li>About</li><li>Contact</li>
+			<?php 
+
+				if ($current === 'Feed') {
+					echo '<li class="active">' . anchor('app/feed', 'Feed') . '</li>'; 
+				}
+
+				else {
+					echo '<li>' . anchor('app/feed', 'Feed') . '</li>'; 
+				}
+
+			?>
+
+			<?php 
+
+				if ($current === 'About') {
+					echo '<li class="active">' . anchor('app/about', 'About') . '</li>'; 
+				}
+
+				else {
+					echo '<li>' . anchor('app/about', 'About') . '</li>'; 
+				}
+
+			?>
+
+			<?php 
+
+				if ($current === 'Contact') {
+					echo '<li class="active">' . anchor('app/contact', 'Contact') . '</li>'; 
+				}
+
+				else {
+					echo '<li>' . anchor('app/contact', 'Contact') . '</li>'; 
+				}
+
+			?>
+
 		</ul>
 	</nav>
