@@ -1,3 +1,9 @@
+html, body, #map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
 body {
 	overflow: hidden;
 }
@@ -42,6 +48,7 @@ body {
 	> .feedCont {
 		display: inline-block;
 		position: absolute;
+		background-color: #B3D1FF;
 		margin-top: 5px;
 		left: 65%;
 		box-sizing: border-box;
@@ -53,5 +60,45 @@ body {
 		// background-color: yellow;
 		// border: 1px solid green;
 	}
+}
+
+.cloudCover {
+
+	width: 250px;
+	height: 80px;
+	background: #999;
+	opacity: 0.9;
+
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+
+	p {
+		margin: 10px 0 8px 10px;
+	}
+
+	.visibilityBarCont {
+		margin: 0 0 10px 10px;
+		width: 228px;
+		height: 30px;
+		background: #ccc;
+		position: relative;
+
+		.visibilityBar {
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #F5EBB6;
+
+			text-align: center;
+
+			p {
+				margin: 6px 0 0 0;
+			}
+		}
+
+	}
+
 }
 

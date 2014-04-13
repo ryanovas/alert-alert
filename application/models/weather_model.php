@@ -29,7 +29,7 @@ class Weather_model extends CI_Model {
 		$data = array(
 			'temp' => $current->main->temp - 273.15,
 			'desc' => $current->weather[0]->description,
-			'clouds' => $current->clouds->all,
+			'visibility' => 100 - $current->clouds->all,
 		);
 
 		return $data;
