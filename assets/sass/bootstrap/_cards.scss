@@ -5,8 +5,26 @@
 	height: 200px;
 	background-color: white;
 	margin: 6px auto;
+	z-index: 9998;
 	box-shadow: 1px 1px 2px #888;
 	border-left: 7px solid #C75145;
+
+	.actionLink {
+		color: #40DBD9;
+		position: absolute;
+		cursor: pointer;
+		z-index: 9999;
+	}
+
+	.viewButton{
+		right: 80px;
+		top: -2px;
+	}
+
+	.schemaButton {
+		right: 10px;
+		top: -2px;
+	}
 
 	&:nth-child(even) { 
 		border-left: 7px solid #E4A268;
@@ -106,9 +124,10 @@
 ul.filter {
 	display: inline;
 	position: absolute;
-	top: -15px;
-	right: 8px;
+	top: -25px;
+	right: 10px;
 	margin: 0;
+	cursor: pointer;
 	color: #40DBD9;
 	font-style: text-underline;
 	z-index: 9999;
@@ -124,4 +143,6 @@ ul.filter {
 			cursor: pointer;
 		}
 	}
+
+	position: 9998;
 }

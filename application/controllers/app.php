@@ -77,6 +77,19 @@ class App extends CI_Controller {
 		$this->load->view('inc/template', $data);
 	}
 
+	public function getSchema() {
+
+		$url = $this->input->post('xml');
+
+		$this->load->model('xmlmodel');
+		$array = $this->xmlmodel->xmltoarray($url);
+
+		echo '<pre>';
+		var_dump($array);
+		echo '</pre>';
+
+	}
+
 	public function updateDB($pass) {
 
 		if ($pass === 'SpaceAppsTO2014') {
