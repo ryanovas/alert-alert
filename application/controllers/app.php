@@ -38,10 +38,11 @@ class App extends CI_Controller {
 
 		$data = array(
 			'weather' => $weather,
-			'voevents' => $voevents
+			'voevents' => $voevents,
+			'main_content' => 'home.php'
 		);
 
-		$this->load->view('home', $data);
+		$this->load->view('inc/template', $data);
 
 	}
 
