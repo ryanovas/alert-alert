@@ -52,7 +52,7 @@ class App extends CI_Controller {
 			'voevents' => $voevents,
 			'main_content' => 'feed',
 			'current' => 'Feed',
-			'js' => array('mapView.js', 'spaceView.js', 'viewController.js')
+			'js' => array('viewController.js')
 		);
 
 		$this->load->view('inc/template', $data);

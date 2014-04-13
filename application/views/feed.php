@@ -48,7 +48,7 @@
 
 			<div class="subMenu">
 				<ul>
-					<li id="land">Land</li><li id="sky">Sky</li><li>Social</li><li>Schema</li>
+					<li id="land">Land</li><li id="sky">Sky</li>
 				</ul>
 			</div>
 
@@ -92,12 +92,14 @@
 		<p>Visibility Right Now</p>
 		<div class="visibilityBarCont"><?php 
 
+			echo '<p>' . $weather['visibility'] . '% Visibility</p>';
+
 			if ($weather['visibility'] == 100) {
-				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>Full Visibility</p>'; 
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar">'; 
 			}
 
 			else {
-				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>' . $weather['visibility'] . '% Visibility</p>'; 
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar">'; 
 			}
 
 		?></div></div>
