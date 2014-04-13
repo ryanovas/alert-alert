@@ -8,10 +8,25 @@ body {
 	overflow: hidden;
 }
 
+.share {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 150px;
+}
+
+.social {
+	z-index: 9999;
+	position: relative;
+	bottom: 50px;
+	right: 110px;
+}
+
 .container {
 	display: block;
 	position: fixed;
 	top: 70px;
+	z-index: 0;
 	@include square(100%);
 	box-sizing: border-box;
 	// border: 1px solid yellow;
@@ -42,7 +57,7 @@ body {
 		box-sizing: border-box;
 		@include size(65%,100%);
 		padding-top: 5px;
-		// border: 1px solid red;
+		
 	}
 
 	> .feedCont {

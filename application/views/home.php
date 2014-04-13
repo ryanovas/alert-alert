@@ -1,3 +1,5 @@
+	<div class="share"></div>
+
 	<div class="container">
 
 		<ul class="filter">
@@ -65,10 +67,7 @@
 				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>' . $weather['visibility'] . '% Visibility</p>'; 
 			}
 
-		?></div></div>
-	</div>
-	
-	<div class="share">
+		?></div>
 	</div>
 	
 	<script>
@@ -78,14 +77,14 @@
 		    longUrl: window.location.href,
 		    success: function (shortUrl) {
 		        
-		        var text = 'SkyWatch via @SproutrTO';
+		        var text = 'See #cosmic events in real time via @SkyWatch!';
 	
 	    		$('.share').share({
 	    			url: shortUrl,
 	    			text: text,
 	    			image: 'https://d72q7iu7osckw.cloudfront.net/images/sproutr.png',
-	    			button_text: 'Share this Question',
-	    			flyout: 'top center'
+	    			button_text: 'Share',
+	    			flyout: 'bottom left'
 	    		});
 	
 		    },
@@ -94,7 +93,7 @@
 		        console.log(JSON.stringify(err));
 		    }
 		});
-	<script>
+	</script>
 
 
 
