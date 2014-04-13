@@ -1,0 +1,31 @@
+nav {
+  position: fixed;
+  top: 10px;
+  height: auto; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  width: 100%;
+  // border: 1px solid yellow;
+
+  > img {
+    margin-left: 1%;
+  }
+
+  > ul {
+  	display: inline;
+  	position: absolute;
+  	list-style-type: none;
+  	font-size: 20px;
+  	color: #fff;
+  	letter-spacing: 1px;
+  	margin: 16px 0 0 -3%;
+  	// border: 1px solid red;
+
+  	> li {
+  		display: inline;
+  		margin-left: 60px;
+  		&.active {
+  			border-bottom: 3px solid #F5EBB6;
+  		}
+  	}
+  }
+
+}
