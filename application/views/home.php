@@ -10,7 +10,7 @@
 
 			<div class="subMenu">
 				<ul>
-					<li id="land">Land</li><li id="sky">Sky</li><li>Social</li><li>Schema</li>
+					<li id="land">Land</li><li id="sky">Sky</li>
 				</ul>
 			</div>
 
@@ -23,17 +23,20 @@
 				foreach ($voevents as $key => $event) : ?>
 
 					<div class="feedCard">
+						<p class="actionLink viewButton">Sky View</p>
+						<p class="actionLink schemaButton">Schema</p>
+						<span style="display:none;" class="xmlLink"><?php echo $event['xml']; ?></span>
 						<div class="imgCont">
 							<?php echo '<img src="' . $event['picture'] . '" alt="Space Watch - ' . $event['title'] . '">'; ?>
 						</div>
 						<div class="cardHeader">
-							<h2><?php echo $event['title']; ?></h2>
+							<h2 class="title"><?php echo $event['title']; ?></h2>
 							<p><?php echo $event['institute']; ?></p>
 							<p><?php echo $event['author']; ?></p>
 						</div>
 						<div class="coordinates">
 							<ul>
-								<li><strong>RA</strong></li><li><?php echo $event['RA']; ?></li><li><strong>Dec</strong></li><li><?php echo $event['dec'] ?></li><li><strong>PosError</strong></li><li><?php echo $event['error']; ?></li>
+								<li><strong>RA</strong></li><li class="ra"><?php echo $event['RA']; ?></li><li><strong>Dec</strong></li><li class="dec"><?php echo $event['dec'] ?></li><li><strong>PosError</strong></li><li><?php echo $event['error']; ?></li>
 							</ul>
 						</div>
 						<div class="description">

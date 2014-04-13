@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+	var currentView = 'map';
+
 	// MAP VIEW
 
 				var skyEvent = {};
@@ -38,6 +40,9 @@ $(document).ready(function() {
 				var eventCircle;
 
 				function mapinitialize() {
+
+				  currentView = 'map';
+
 				  // Create the map
 				  var mapOptions = {
 				    zoom: 3,
@@ -142,6 +147,7 @@ $(document).ready(function() {
 				  title: title
 		        });
 			    marker.setMap(map);
+			    map.setCenter(loc);
 				var contentString = '<div class="content">'+
 			      '<div class="siteNotice">'+
 			      '</div>'+
@@ -157,14 +163,16 @@ $(document).ready(function() {
 			
 				  var infowindow = new google.maps.InfoWindow({
 				      content: contentString
-				  });
-				
+				  });   
+
 				  google.maps.event.addListener(marker, 'click', function() {
-				    infowindow.open(map,marker);
-				  });    
+				     infowindow.open(map,marker);
+				   });    
 			};
 		 
 		    function skyinitialize() {
+
+		      currentView = 'sky';
 		 
 		      var mapOptions = {
 		        zoom: 2,
@@ -190,13 +198,54 @@ $(document).ready(function() {
 		      map.setMapTypeId('sky');
 		            
 		    }
+
+		    var Coords = {};
+
+		    function createCoords(raInput, decInput, titleInput, descInput) {
+		    	var index = Object.size(Coords);
+		    	Coords[index] = {
+		    		ra: raInput,
+		    		dec: decInput,
+		    		title: titleInput,
+		    		desc: descInput
+		    	};
+		    }
 		    
 			function markSpaceEvent() {
-		      convertCoords(160.99, 39.99, 'Wham-o space event', 'Although you may think astronomy is boring, some telescope discovered something fantasmagoric.  You should be excited about this too!');
-		      convertCoords(39.99, 160.99, 'Wham-o space event2', 'Astronomy is cool! Some telescope discovered something awesome.  You are excited!');
-		      convertCoords(500.99, -39.99, 'Wham-o space event3', 'Coffee is the elixer of life, and some telescope discovered something out of this world.  Booya!');
-		      convertCoords(39.99, -500.99, 'Wham-o space event4', 'We like space so much we gave up a whole weekend to create this web site.  You should be excited about this too!');
+		    	
+				for (var coord in Coords) {
+
+					convertCoords(Coords[coord].ra, Coords[coord].dec, Coords[coord].title, Coords[coord].desc);
+
+				}
+
 			}
+
+
+	// SCHEMA VIEW
+
+			function schemainitialize(xml) {
+
+				$.ajax({
+				    type: 'GET',
+				    url: xml,
+				    processData: true,
+				    data: {},
+				    dataType: "json",
+				    success : function(data){
+				        
+				        var result = processData(data);
+				    	$('#map-canvas').html('<pre>' + result + '</pre>');
+
+				    }
+				});
+
+			}
+
+
+
+
+
 	
 	$('#land').click(function() {
 		mapinitialize();
@@ -206,4 +255,55 @@ $(document).ready(function() {
 		skyinitialize();
 	});
 
+	$('.schemaButton').click(function() {
+		
+		var xml = $(this).parent().find('.xmlLink').html();
+		schemainitialize(xml);
+
+	});
+
+	$('.viewButton').click(function() {
+
+		var parent = $(this).parent();
+
+		var ra = parent.find('.coordinates ul').find('.ra').html();
+		var dec = parent.find('.coordinates ul').find('.dec').html();
+		var title = parent.find('.cardHeader .title').html();
+		var desc = parent.find('.description p').html();
+
+		if (currentView !== 'sky') {
+			skyinitialize();
+		}
+
+		createCoords(ra, dec, title, desc);
+		markSpaceEvent();
+
+	});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
