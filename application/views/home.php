@@ -65,6 +65,9 @@ header( 'Pragma: no-cache' );
 		// createSkyEvent(41.878113, -87.629798);
 		// createSkyEvent(40.714352, -74.005973);
 		// createSkyEvent(34.052234, -118.243684);
+		// createSkyEvent(62.474876,-114.408995);
+		// createSkyEvent(32.2324358,-110.9473494); //LPL (Lunar and Planetary Laboratory)
+		// createSkyEvent(34.137658,-118.125269); //Caltech (California Institute of Technology)
 
 		var eventCircle;
 
