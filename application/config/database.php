@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'spaceapps.c35ufu5mu0eq.us-east-1.rds.amazonaws.com';
+$db['default']['hostname'] = 'spacewatch.c35ufu5mu0eq.us-east-1.rds.amazonaws.com';
 $db['default']['username'] = 'spaceapps';
 $db['default']['password'] = 'SpaceAppsTO2014';
 $db['default']['database'] = 'alert_alert';
