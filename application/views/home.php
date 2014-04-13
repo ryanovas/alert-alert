@@ -59,245 +59,32 @@ header( 'Pragma: no-cache' );
 
 		<div class="feedCont">
 
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
+			<?php
 
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
+				foreach ($voevents as $key => $event) : ?>
 
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
+					<div class="feedCard">
+						<div class="imgCont">
+							<?php echo '<img src="' . $event['picture'] . '" alt="Space Watch - ' . $event['title'] . '">'; ?>
+						</div>
+						<div class="cardHeader">
+							<h2><?php echo $event['title']; ?></h2>
+							<p><?php echo $event['institute']; ?></p>
+							<p><?php echo $event['author']; ?></p>
+						</div>
+						<div class="coordinates">
+							<ul>
+								<li>RA: <?php echo substr($event['position'], 0, strpos($event['position'], ',')); ?></li><li>Dec: <?php echo substr($event['position'], strpos($event['position'], ',') + 1, strpos($event['position'], ' ')); ?></li><li>PosError: <?php echo substr($event['position'], strpos($event['position'], ' '), strlen($event['position'])); ?></li>
+							</ul>
+						</div>
+						<div class="description">
+							<p><?php echo $event['desc']; ?></p>
+						</div>
+							<p class="ivo"><?php echo $key; ?></p>
+							<p class="timestamp"><?php echo $event['date']; ?></p>
+					</div>
 
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
-
-			<div class="feedCard">
-				<div class="imgCont">
-				</div>
-				<div class="cardHeader">
-					<h2>Supernuvae</h2>
-					<p>From: NASA GCN</p>
-					<p>Author: Ryan Ovas</p>
-				</div>
-				<div class="coordinates">
-					<ul>
-						<li>RA: 24.594</li><li>Dec: 41.485</li><li>PosError: 0</li>
-					</ul>
-				</div>
-				<div class="description">
-					<p>This is a description of this event and some of the observation's taking place</p>
-				</div>
-					<p class="ivo">ivo://nvo.caltech/voeventnet/catot#1004071150784109051</p>	
-					<p class="timestamp">1918-11-11T11:11:11</p>
-			</div>
+			<?php endforeach; ?>
 
 		</div>
 	
@@ -305,3 +92,11 @@ header( 'Pragma: no-cache' );
 
 </body>
 </html>
+
+
+
+
+
+
+
+

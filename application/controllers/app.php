@@ -30,18 +30,18 @@ class App extends CI_Controller {
 
 	public function home() {
 
-		$data = array(
+		$this->load->model('xmlmodel');
+		$voevents = $this->xmlmodel->voevents();
 
+		$this->load->model('weather_model');
+		$weather = $this->weather_model->getWeather();
+
+		$data = array(
+			'weather' => $weather,
+			'voevents' => $voevents
 		);
 
 		$this->load->view('home', $data);
-
-	}
-
-	public function voevents() {
-
-		$this->load->model("xmlmodel");
-		$voevents = $this->xmlmodel->voevents();
 
 	}
 
@@ -51,13 +51,6 @@ class App extends CI_Controller {
 			$this->load->model("xmlmodel");
 			$this->xmlmodel->updateDB();
 		}
-
-	}
-
-	public function weather() {
-
-		$this->load->model('weather_model');
-		$weather = $this->weather_model->getWeather();
 
 	}
 

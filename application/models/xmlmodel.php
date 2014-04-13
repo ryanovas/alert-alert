@@ -11,7 +11,7 @@ class Xmlmodel extends CI_Model {
 				$data[$row->IVO]['title'] = $row->Title;
 				$data[$row->IVO]['author'] = $row->Author;
 				$data[$row->IVO]['xml'] = $row->XML;
-				$data[$row->IVO]['date'] = $row->Published;
+				$data[$row->IVO]['date'] = date('F d Y, g:ia', strtotime($row->Published));
 				$data[$row->IVO]['reference'] = $row->Reference;
 				$data[$row->IVO]['institute'] = $row->Institute;
 				$data[$row->IVO]['desc'] = $row->Description;
