@@ -20,6 +20,21 @@
 
 			<?php
 
+				$coords = array('43.7182713, -79.3777061, 
+								 47.614848, -122.3358423, 
+								 41.878113, -87.629798,
+								 40.714352, -74.005973,
+								 34.052234, -118.243684,
+								 62.474876,-114.408995,
+								 32.2324358,-110.9473494, 
+								 34.137658,-118.125269,
+								 29.817178,-95.4012915,
+								 46.8580074,-71.3460728,
+								 34.078611,-107.618316,
+								 10.4683918,-66.8903658,
+								 19.8199996,-155.47');
+				$i = 0;
+
 				foreach ($voevents as $key => $event) : ?>
 
 					<div class="feedCard">
@@ -45,6 +60,17 @@
 						</div>
 							<p class="ivo"><?php echo $key; ?></p>
 							<p class="timestamp"><?php echo $event['date']; ?></p>
+
+						<?php
+
+						$spanCoords = explode(',', $coords[$i]);
+						foreach ($spanCoords as $key => $row) {
+							echo '<span style="display:none;" class="coord' . $key . '">' . $row . '</span>';
+						}
+
+						$i++;
+
+						?>
 					</div>
 
 			<?php endforeach; ?>

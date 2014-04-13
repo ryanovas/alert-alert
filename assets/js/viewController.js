@@ -20,26 +20,35 @@ $(document).ready(function() {
 				var lat, lng;
 
 				// Function for creating a Sky Event
-				function createSkyEvent(lat, lng) {
+				function createSkyEvent(lat, lng, borderColor) {
 					var index = Object.size(skyEvent);
 					skyEvent[index] = {
-						center: new google.maps.LatLng(lat, lng)
+						center: new google.maps.LatLng(lat, lng),
+						sColor: borderColor
 					};
 				}
 
 				// DUMMY COORDINATES
-				createSkyEvent(43.7182713, -79.3777061);
-				createSkyEvent(47.614848, -122.3358423);
-				createSkyEvent(41.878113, -87.629798);
-				createSkyEvent(40.714352, -74.005973);
-				createSkyEvent(34.052234, -118.243684);
-				createSkyEvent(62.474876,-114.408995);
-				createSkyEvent(32.2324358,-110.9473494); //LPL (Lunar and Planetary Laboratory)
-				createSkyEvent(34.137658,-118.125269); //Caltech (California Institute of Technology)
+				createSkyEvent(43.7182713, -79.3777061, '#FF0000');
+				createSkyEvent(47.614848, -122.3358423, '#FF0000');
+				createSkyEvent(41.878113, -87.629798, '#FF0000');
+				createSkyEvent(40.714352, -74.005973, '#FF0000');
+				createSkyEvent(34.052234, -118.243684, '#FF0000');
+				createSkyEvent(62.474876,-114.408995, '#FF0000');
+				createSkyEvent(32.2324358,-110.9473494, '#FF0000'); //LPL (Lunar and Planetary Laboratory)
+				createSkyEvent(34.137658,-118.125269, '#FF0000'); //Caltech (California Institute of Technology)
+				createSkyEvent(29.817178,-95.4012915, '#FF0000');
+				createSkyEvent(46.8580074,-71.3460728, '#FF0000');
+				createSkyEvent(34.078611,-107.618316, '#FF0000');
+				createSkyEvent(10.4683918,-66.8903658, '#FF0000');
+				createSkyEvent(19.8199996,-155.47, '#FF0000');
+				// Green colour '00FF00'
 
+				
 				var eventCircle;
+				var sColor;
 
-				function mapinitialize() {
+				function mapinitialize(sColor) {
 
 				  currentView = 'map';
 
@@ -56,7 +65,8 @@ $(document).ready(function() {
 
 				  for (var sEvent in skyEvent) {
 				    var addCircle = {
-				      strokeColor: '#FF0000',
+				      //strokeColor: skyEvent[sEvent].sColor,
+				      strokeColor: sColor,
 				      strokeOpacity: 0.8,
 				      strokeWeight: 2,
 				      fillColor: '#FF0000',
@@ -70,7 +80,7 @@ $(document).ready(function() {
 				  }
 				}
 
-				google.maps.event.addDomListener(window, 'load', mapinitialize);
+				google.maps.event.addDomListener(window, 'load', mapinitialize('#FF0000'));
 
 
 
