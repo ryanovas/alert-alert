@@ -30,7 +30,11 @@ class App extends CI_Controller {
 
 	public function home() {
 
-		echo 'hello world eh';
+		$data = array(
+
+		);
+
+		$this->load->view('home', $data);
 
 	}
 

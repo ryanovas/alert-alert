@@ -9,13 +9,20 @@
 // other navbar variations.
 
 .navbar {
+  display: inline;
   position: relative;
   height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  width: 100%;
   // margin-bottom: $navbar-margin-bottom;
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
+  border: 1px solid yellow;
 
   // Prevent floats from breaking the navbar
   @include clearfix();
+
+  > img {
+    margin-left: 3%;
+  }
 
   @media (min-width: $grid-float-breakpoint) {
     border-radius: $navbar-border-radius;
@@ -217,7 +224,10 @@
 // the nav the full height of the horizontal nav (above 768px).
 
 .navbar-nav {
+  display: inline-block;
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+  list-style-type: none;
+  border: 1px solid red;
 
   > li > a {
     padding-top:    10px;
@@ -256,6 +266,9 @@
 
     > li {
       float: left;
+      margin: auto 25px;
+      font-size: 18px;
+      color: #fff;
       > a {
         padding-top:    $navbar-padding-vertical;
         padding-bottom: $navbar-padding-vertical;
