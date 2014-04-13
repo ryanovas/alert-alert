@@ -81,6 +81,8 @@
 				foreach ($voevents as $key => $event) : ?>
 
 					<div class="feedCard">
+						<p class="actionLink viewButton">Sky View</p>
+						<p class="actionLink schemaButton">Schema</p>
 						<div class="imgCont">
 							<?php echo '<img src="' . $event['picture'] . '" alt="Space Watch - ' . $event['title'] . '">'; ?>
 						</div>
