@@ -1,3 +1,4 @@
+	<div class="share"></div>
 
 	<div id="modalCover">
 	</div>
@@ -31,7 +32,26 @@
 
 		<div class="modalButtons">
 			<ul>
-				<li class="cancel">Cancel</li><li class="ok">Ok</li>
+				<li id="filterCancel" class="cancel">Cancel</li><li id="filterOK" class="ok">Ok</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="subscribeModal">
+		<h1>Subscribe to:</h1>
+
+		<div class="options">
+			<h3>EVENTS</h3>
+			<form>
+				<input type="checkbox" name="event" value="Supernova">Email<br>
+				<input type="checkbox" name="event" value="Gamma-ray Bursts">RSS<br>
+				<input type="checkbox" name="event" value="Gravitational Microlensing">Tweets<br>
+			</form>
+		</div>
+
+		<div class="modalButtons">
+			<ul>
+				<li id="subCancel" class="cancel">Cancel</li><li id="subOK" class="ok">Ok</li>
 			</ul>
 		</div>
 	</div>
@@ -39,7 +59,7 @@
 	<div class="container">
 
 		<ul class="filter">
-			<li id="filterButton">Filters</li><li>Subscribe</li>
+			<li id="filterButton">Filters</li><li id="subButton">Subscribe</li>
 		</ul>
 
 		<div class="displayCont">
@@ -120,7 +140,7 @@ $(document).ready(function () {
 
     });
 
-    $('.cancel').click(function() {
+    $('#filterCancel').click(function() {
 
     	$('#filterModal').css({
         	opacity: '0',
@@ -131,7 +151,7 @@ $(document).ready(function () {
 
     });
 
-    $('.ok').click(function() {
+    $('#filterOK').click(function() {
 
     	$('#filterModal').css({
         	opacity: '0',
@@ -140,7 +160,63 @@ $(document).ready(function () {
         });
         $('#modalCover').css('display', 'none');
 
+    });
+
+    $('#subButton').click(function() {
+
+        $('#subscribeModal').css({
+        	opacity: '1',
+        	zIndex: '9999',
+        	pointerEvents: 'auto'
+        });
+        $('#modalCover').css('display', 'block');
+
+    });
+
+    $('#subCancel').click(function() {
+
+    	$('#subscribeModal').css({
+        	opacity: '0',
+        	zIndex: '-9999',
+        	pointerEvents: 'none'
+        });
+        $('#modalCover').css('display', 'none');
+
+    });
+
+    $('#subOK').click(function() {
+
+    	$('#subscribeModal').css({
+        	opacity: '0',
+        	zIndex: '-9999',
+        	pointerEvents: 'none'
+        });
+        $('#modalCover').css('display', 'none');
+
     });    
+
+    	jQuery.urlShortener.settings.apiKey='AIzaSyB5G9uHkh_xMaazDUV2loBWUpnuROvEiHA';
+
+    	jQuery.urlShortener({
+    	    longUrl: window.location.href,
+    	    success: function (shortUrl) {
+    	        
+    	        var text = 'See #cosmic events in real time via @SkyWatch!';
+
+        		$('.share').share({
+        			url: shortUrl,
+        			text: text,
+        			image: 'https://d72q7iu7osckw.cloudfront.net/images/sproutr.png',
+        			button_text: 'Share',
+        			flyout: 'bottom left'
+        		});
+
+    	    },
+    	    error: function(err)
+    	    {
+    	        console.log(JSON.stringify(err));
+    	    }
+    	});
 
 });
 

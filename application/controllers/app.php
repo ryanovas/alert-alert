@@ -52,7 +52,7 @@ class App extends CI_Controller {
 			'voevents' => $voevents,
 			'main_content' => 'feed',
 			'current' => 'Feed',
-			'js' => array('viewController.js')
+			'js' => array('viewController.js', 'share.min.js', 'jquery.urlshortener.min.js')
 		);
 
 		$this->load->view('inc/template', $data);
