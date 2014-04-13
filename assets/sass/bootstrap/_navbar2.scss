@@ -27,6 +27,7 @@ nav {
   		}
       &:hover {
         border-bottom: 3px solid #F5EBB6;
+        -webkit-transition: all 0.3s ease;
       }
   	}
   }

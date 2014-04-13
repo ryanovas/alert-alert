@@ -144,8 +144,13 @@ a:hover {
 			margin-right: 25px;
 			color: $brand-primary;
 			font-size: 16px;
+			cursor:pointer;
 			&:first-of-type {
 				margin-left: 25px;
+			}
+			&:hover {
+				color: lighten($brand-primary, 15%) !important;
+				-webkit-transition: all 0.3s ease;
 			}
 		}
 	}
