@@ -36,6 +36,11 @@ $(document).ready(function() {
 				createSkyEvent(62.474876,-114.408995);
 				createSkyEvent(32.2324358,-110.9473494); //LPL (Lunar and Planetary Laboratory)
 				createSkyEvent(34.137658,-118.125269); //Caltech (California Institute of Technology)
+				createSkyEvent(29.817178,-95.4012915);
+				createSkyEvent(46.8580074,-71.3460728);
+				createSkyEvent(34.078611,-107.618316);
+				createSkyEvent(10.4683918,-66.8903658);
+				createSkyEvent(19.8199996,-155.47);
 
 				var eventCircle;
 

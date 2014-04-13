@@ -1,5 +1,61 @@
 	<div class="share"></div>
 
+	<div id="modalCover">
+	</div>
+
+	<div id="filterModal">
+		<h1>Filter by:</h1>
+
+		<div class="options">
+			<h3>EVENTS</h3>
+				<form>
+					<input type="checkbox" name="event" value="Supernova">Supernovae<br>
+					<input type="checkbox" name="event" value="Gamma-ray Bursts">Gamma-ray Bursts<br>
+					<input type="checkbox" name="event" value="Gravitational Microlensing">Gravitational Microlensing<br>
+					<input type="checkbox" name="event" value="Asteroids">Asteroids<br>
+					<input type="checkbox" name="event" value="Other">Other<br>
+				</form>
+			<h3>SOURCE</h3>
+				<form>
+					<input type="checkbox" name="Source" value="Astronomers Telegram">Astronomers Telegram<br>
+					<input type="checkbox" name="Source" value="Central Bureau for Astronomical Telegrams">Central Bureau for Astronomical Telegrams<br>
+					<input type="checkbox" name="Source" value="NASA GCN">NASA GCN<br>
+					<input type="checkbox" name="Source" value="GRB Coordinates Network">GRB Coordinates Network<br>
+					<input type="checkbox" name="Source" value="Other">Other<br>
+				</form>
+			<h3>DATE</h3>
+				<form action="demo_form.asp">
+				  From: <input type="date" name="from">
+				  To: <input type="date" name="to">
+				</form>
+		</div>
+
+		<div class="modalButtons">
+			<ul>
+				<li id="filterCancel" class="cancel">Cancel</li><li id="filterOK" class="ok">Ok</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="subscribeModal">
+		<h1>Subscribe with:</h1>
+
+		<div class="options">
+			<h3>METHODS</h3>
+			<form>
+				<input type="checkbox" name="event" value="Supernova">Email<br>
+				<input type="checkbox" name="event" value="Gamma-ray Bursts">RSS<br>
+				<input type="checkbox" name="event" value="Gravitational Microlensing">Tweets<br>
+			</form>
+		</div>
+
+		<div class="modalButtons">
+			<ul>
+				<li id="subCancel" class="cancel">Cancel</li><li id="subOK" class="ok">Ok</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="container">
 
 		<ul class="filter">
