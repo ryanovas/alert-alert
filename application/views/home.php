@@ -74,7 +74,7 @@ header( 'Pragma: no-cache' );
 						</div>
 						<div class="coordinates">
 							<ul>
-								<li>RA: <?php echo substr($event['position'], 0, strpos($event['position'], ',')); ?></li><li>Dec: <?php echo substr($event['position'], strpos($event['position'], ',') + 1, strpos($event['position'], ' ')); ?></li><li>PosError: <?php echo substr($event['position'], strpos($event['position'], ' '), strlen($event['position'])); ?></li>
+								<li>RA: <?php echo $event['RA']; ?></li><li>Dec: <?php echo $event['dec']; ?></li><li>PosError: <?php echo $event['error']; ?></li>
 							</ul>
 						</div>
 						<div class="description">
@@ -88,6 +88,21 @@ header( 'Pragma: no-cache' );
 
 		</div>
 	
+	</div>
+
+	<div class="cloudCover">
+		<p>Visibility Right Now</p>
+		<div class="visibilityBarCont"><?php 
+
+			if ($weather['visibility'] == 100) {
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar"><p>Full Visibility</p>'; 
+			}
+
+			else {
+				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar">'; 
+			}
+
+		?></div></div>
 	</div>
 
 </body>

@@ -15,7 +15,13 @@ class Xmlmodel extends CI_Model {
 				$data[$row->IVO]['reference'] = $row->Reference;
 				$data[$row->IVO]['institute'] = $row->Institute;
 				$data[$row->IVO]['desc'] = $row->Description;
-				$data[$row->IVO]['position'] = $row->Position;
+				$data[$row->IVO]['RA'] = substr($row->Position, 0, strpos($row->Position, ','));
+
+				$cut1 = substr($row->Position, strpos($row->Position, ',') + 1, strlen($row->Position));
+				$dec = substr($cut1, 0, strpos($cut1, ' '));
+				$data[$row->IVO]['dec'] = $dec;
+
+				$data[$row->IVO]['error'] = substr($row->Position, strpos($row->Position, ' '), strlen($row->Position));
 				$data[$row->IVO]['picture'] = $row->Picture;
 			}
 
