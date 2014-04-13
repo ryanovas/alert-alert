@@ -1,8 +1,5 @@
 	<div class="container">
 
-		<ul>
-			<li>Land</li><li>Sky</li><li>Schema</li>
-		</ul>
 		<ul class="filter">
 			<li>Filters</li><li>Subscribe</li>
 		</ul>
@@ -10,6 +7,12 @@
 		<div class="displayCont">
 
 			<div id="map-canvas"></div>
+
+			<div class="subMenu">
+				<ul>
+					<li>Land</li><li>Sky</li><li>Social</li><li>Schema</li>
+				</ul>
+			</div>
 
 		</div>
 
@@ -61,6 +64,8 @@
 
 		?></div></div>
 	</div>
+
+
 
 
 

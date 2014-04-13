@@ -48,7 +48,7 @@ body {
 	> .feedCont {
 		display: inline-block;
 		position: absolute;
-		background-color: #B3D1FF;
+		background-color: #99B3CC;
 		margin-top: 5px;
 		left: 65%;
 		box-sizing: border-box;
@@ -102,3 +102,26 @@ body {
 
 }
 
+.subMenu {
+	position: absolute;
+	bottom: 80px;
+	right: 10px;
+	background: #999;
+	opacity: 0.9;
+	margin: 0;
+
+	> ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		> li {
+			display: inline;
+			margin-right: 25px;
+			color: $brand-primary;
+			font-size: 16px;
+			&:first-of-type {
+				margin-left: 25px;
+			}
+		}
+	}
+}
