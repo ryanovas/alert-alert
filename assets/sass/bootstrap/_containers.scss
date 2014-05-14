@@ -177,9 +177,9 @@ a:hover {
 }
 
 .welcome {
-	width: 45%;
+	width: 50%;
 	height: 60%;
-	margin: 300px 0 0 50%;
+	margin: 300px 0 0 45%;
 	text-align: right;
 
 	> h1 {
@@ -208,6 +208,7 @@ a:hover {
 				border: 2px solid #fff;
 				border-radius: 10px;
 				margin: 0 auto;
+				@include transition(all 0.3s ease);
 
 				&:last-of-type {
 					margin-left: 25px;
@@ -215,10 +216,100 @@ a:hover {
 
 				&:hover {
 					background: #fff;
-					color: #000;
 					cursor: pointer;
+
+					a {
+						color: #000 !important;
+					}
 				}
 			}
 		}
 	}
 }
+
+.about {
+	background: white;
+	margin-top: 75px;
+	padding-bottom: 220px;
+
+	.aboutCont {
+		width: 800px;
+		margin: 0 auto;
+
+		p {
+			font-family: 'Roboto';
+			color: #666;
+			font-size: 18px;
+			margin: 15px 0;
+			line-height: 30px;
+
+			&:first-of-type {
+				padding-top: 25px;
+			}
+		}
+
+		li {
+			font-family: 'Roboto';
+			color: #666;
+			font-size: 18px;
+			margin: 15px 0;
+			line-height: 30px;
+		}
+
+		a {
+			color: lighten(#415160, 20%) !important;
+
+			&:hover {
+				color: lighten(#415160, 50%) !important;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

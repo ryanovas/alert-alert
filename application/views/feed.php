@@ -139,7 +139,8 @@
 
 	<div class="cloudCover">
 		<p>Visibility Right Now</p>
-		<div class="visibilityBarCont"><?php 
+		<div class="visibilityBarCont">
+			<?php 
 
 			echo '<p>' . $weather['visibility'] . '% Visibility</p>';
 
@@ -151,12 +152,42 @@
 				echo '<div style="width:' . $weather['visibility'] . '%;" class="visibilityBar">'; 
 			}
 
-		?></div>
+			?>
+		</div>
 	</div>
 
 <script type="text/javascript">
 
 $(document).ready(function () {
+
+	function createCookie(name, value, days) {
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+		}
+
+		else var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+	}
+
+	function readCookie(name) {
+	  var nameEQ = name + "=";
+	  var ca = document.cookie.split(';');
+	  for(var i=0;i < ca.length;i++) {
+	    var c = ca[i];
+	    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	  }
+	  return null;
+	}
+
+	if (readCookie('alertTimer') === null) {
+
+		alert('Please note this is just a prototype, we are currently developing a fully functional product.');
+		createCookie('alertTimer', true, 0.076);
+
+	}
 
     $('#filterButton').click(function() {
 
@@ -230,12 +261,12 @@ $(document).ready(function () {
     	    longUrl: window.location.href,
     	    success: function (shortUrl) {
     	        
-    	        var text = 'See #cosmic events in real time via @SkyWatch!';
+    	        var text = 'Check out the "Best Use of Data" winner of #SpaceApps2014 @SkyWatchApps! #space #astronomy #bigdata';
 
         		$('.share').share({
         			url: shortUrl,
         			text: text,
-        			image: 'https://d72q7iu7osckw.cloudfront.net/images/sproutr.png',
+        			image: 'http://skywatch.co/assets/images/logo.png',
         			button_text: 'Share',
         			flyout: 'bottom left'
         		});

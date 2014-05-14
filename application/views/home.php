@@ -3,7 +3,7 @@
 
 		<div class="welcome">
 			<h1>Look up to the Sky and Dream</h1>
-			<h4>A new way to follow the stars</h4>
+			<h4>NASA Space Apps 2014 Winning Prototype in "Best Use Of Data"</h4>
 
 			<div class="buttons">
 				<ul>

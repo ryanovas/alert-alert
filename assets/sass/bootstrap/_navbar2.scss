@@ -1,11 +1,13 @@
 nav {
   position: fixed;
-  top: 10px;
-  height: 64px; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  top: 0;
+  height: 74px; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   width: 100%;
   border-bottom: 4px solid darken($brand-primary, 20%);
+  background: #415160;
+  padding-top: 8px;
 
-  > img {
+  img {
     margin-left: 1%;
   }
 
