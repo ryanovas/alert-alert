@@ -246,6 +246,10 @@ ul {
       color: #fff;
       font-weight: 700; }
 
+input,
+button {
+  outline: 0; }
+
 #bgGrad {
   position: absolute;
   width: 100%;
@@ -270,7 +274,9 @@ ul {
 #contentCont > img {
   display: block;
   width: 300px;
-  margin: auto; }
+  margin: 10px auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
   #contentCont > img.contentOpen {
     width: 150px; }
 
@@ -282,18 +288,17 @@ ul {
 
 #emails {
   position: relative;
-  margin: 30px 0 10px; }
+  margin: 15px 0 10px; }
   #emails input {
     width: 100%;
     height: 40px;
     border: 0;
     border-radius: 10px;
-    padding: 10px;
-    outline: 0; }
+    padding: 10px; }
   #emails button {
     position: absolute;
     right: 0;
-    width: 125px;
+    width: 190px;
     height: 40px;
     background-color: #FF6C5D;
     border: 0;
@@ -305,6 +310,24 @@ ul {
   color: #ccc; }
   #menu li {
     padding: 0 29px; }
+
+/*********************************
+
+	TEAM
+
+**********************************/
+#imgWrapper {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%; }
+  #imgWrapper img {
+    border-radius: 1000px;
+    opacity: 0.8;
+    cursor: pointer; }
+    #imgWrapper img:hover, #imgWrapper img.open {
+      opacity: 1; }
 
 #footer {
   position: absolute;

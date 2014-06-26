@@ -38,6 +38,11 @@ ul {
 	}
 }
 
+input,
+button {
+	outline: 0;
+}
+
 #bgGrad {
 	position: absolute;
 	@include square(100%);
@@ -73,7 +78,8 @@ ul {
 	> img {
 		display: block;
 		width: 300px;
-		margin: auto;
+		margin: 10px auto;
+		@include transition(all 0.5s ease);
 
 		&.contentOpen {
 			width: 150px;
@@ -93,20 +99,19 @@ ul {
 
 #emails {
 	position: relative;
-	margin: 30px 0 10px;
+	margin: 15px 0 10px;
 
 	input {
 		@include size(100%,40px);
 		border: 0;
 		border-radius: 10px;
 		padding: 10px;
-		outline: 0;
 	}
 
 	button {
 		position: absolute;
 		right: 0;
-		@include size(125px,40px);
+		@include size(190px,40px);
 		background-color: #FF6C5D;
 		border: 0;
 		color: #fff;
@@ -120,6 +125,35 @@ ul {
 
 	li {
 		padding: 0 29px;
+	}
+}
+
+/*********************************
+
+	TEAM
+
+**********************************/
+
+.bioCont {
+	// display: none;
+}
+
+#imgWrapper {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+
+	img {
+		border-radius: 1000px;
+		opacity: 0.8;
+		cursor: pointer;
+
+		&:hover,
+		&.open {
+			opacity: 1;
+		}
 	}
 }
 
