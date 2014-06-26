@@ -1,0 +1,144 @@
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	background-color: $brand-primary;
+}
+
+a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+ul {
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding-left: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		border-right: 1px solid #ccc;
+		font-weight: 300;
+		color: #ccc;
+
+		&:last-of-type {
+			border-right: 0;
+		}
+
+		&.active {
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+}
+
+#bgGrad {
+	position: absolute;
+	@include square(100%);
+	// background: 
+	//     repeating-radial-gradient(
+	//       circle at 50% 25%, 
+	//       rgba(249,236,181,0.6),
+	//       rgba(249,236,181,0)
+	//     );
+}
+
+#wrapper {
+	display: block;
+	position: relative;
+	@include size(96%,100%);
+	max-width: 550px;
+	margin: auto;
+	padding-top: 300px;
+
+	&.contentOpen {
+		padding-top: 30px;
+	}
+}
+
+/*********************************
+
+	CONTENT CAROUSEL
+
+**********************************/
+
+#contentCont {
+
+	> img {
+		display: block;
+		width: 300px;
+		margin: auto;
+
+		&.contentOpen {
+			width: 150px;
+		}
+	}
+}
+
+#whatIs {
+	display: none;
+	color: #fff;
+
+	&.open {
+		display: block;
+	}
+}
+
+
+#emails {
+	position: relative;
+	margin: 30px 0 10px;
+
+	input {
+		@include size(100%,40px);
+		border: 0;
+		border-radius: 10px;
+		padding: 10px;
+		outline: 0;
+	}
+
+	button {
+		position: absolute;
+		right: 0;
+		@include size(125px,40px);
+		background-color: #FF6C5D;
+		border: 0;
+		color: #fff;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+}
+
+#menu {
+	color: #ccc;
+
+	li {
+		padding: 0 29px;
+	}
+}
+
+#footer {
+	position: absolute;
+	left: 50%;
+	margin-left: -178px;
+	bottom: 0;
+	width: 60%;
+
+	ul li {
+		padding: 0 5px;
+
+		&:first-of-type {
+			border-right: 0;
+		}
+
+		&:nth-child(2) {
+			border-left: 1px solid #ccc;
+		}
+	}
+}

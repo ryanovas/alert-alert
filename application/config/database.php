@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '173.254.28.136';
-// $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'ryanovas_admin';
-$db['default']['password'] = 'MBIGoldey5!@#';
-$db['default']['database'] = 'ryanovas_skywatch';
+// $db['default']['hostname'] = '173.254.28.136';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'mysql';
+$db['default']['database'] = 'skywatch';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

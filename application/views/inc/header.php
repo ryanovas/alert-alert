@@ -21,7 +21,7 @@ header( 'Pragma: no-cache' );
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 	
-	<?php echo '<link href="' . base_url() . 'assets/css/bootstrap.css?v1.1" rel="stylesheet" type="text/css">'; ?>
+	<?php echo '<link href="' . base_url() . 'assets/css/home.css?v1.1" rel="stylesheet" type="text/css">'; ?>
 
 	<?php echo '<script src="' . base_url() . 'assets/js/jquery-1.11.0.min.js"></script>'; ?>
 	<?php echo '<script src="' . base_url() . 'assets/js/share.min.js"></script>'; ?>
@@ -48,33 +48,3 @@ header( 'Pragma: no-cache' );
 </head>
 
 <body>
-
-	<nav class="navbar">
-		<?php echo anchor('app/home', '<img src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch">'); ?>
-		<ul class="navbar-nav">
-			<?php 
-
-				if ($current === 'Feed') {
-					echo '<li class="active">' . anchor('app/feed', 'Feed') . '</li>'; 
-				}
-
-				else {
-					echo '<li>' . anchor('app/feed', 'Feed') . '</li>'; 
-				}
-
-			?>
-
-			<?php 
-
-				if ($current === 'About') {
-					echo '<li class="active">' . anchor('app/about', 'About') . '</li>'; 
-				}
-
-				else {
-					echo '<li>' . anchor('app/about', 'About') . '</li>'; 
-				}
-
-			?>
-
-		</ul>
-	</nav>
