@@ -31,7 +31,7 @@ ul {
 			border-right: 0;
 		}
 
-		&.active {
+		&.bold {
 			color: #fff;
 			font-weight: 700;
 		}
@@ -61,10 +61,48 @@ button {
 	max-width: 550px;
 	margin: auto;
 	padding-top: 300px;
+	@include transition(all 1.5s ease);
 
 	&.contentOpen {
 		padding-top: 30px;
 	}
+}
+
+/*********************************
+
+	KEYFRAMES
+
+**********************************/
+
+@-webkit-keyframes expand {
+
+	0% {height: 0px;}
+	100% {height: 470px;}
+}
+
+@-webkit-keyframes imgRise {
+
+	0% {top: 110px;}
+	100% {top: 0px;}
+}
+
+@-webkit-keyframes arrowRise {
+
+	0% {top:20px;opacity:0;}
+	15% {top:20px;opacity:0.1;}
+	100% {top:0px;opacity:1;}
+}
+
+@-webkit-keyframes bioRise {
+
+	0% {top: 350px;}
+	100% {top: 0px;}
+}
+
+@-webkit-keyframes bioFall {
+
+	0% {top: 0px;}
+	100% {top: 350px;}
 }
 
 /*********************************
@@ -79,7 +117,7 @@ button {
 		display: block;
 		width: 300px;
 		margin: 10px auto;
-		@include transition(all 0.5s ease);
+		@include transition(all 1.5s ease);
 
 		&.contentOpen {
 			width: 150px;
@@ -90,9 +128,22 @@ button {
 #whatIs {
 	display: none;
 	color: #fff;
+	margin-top: 25px;
+	overflow-y: hidden;
+
+	h1 {
+		color: #F9ECB5;
+	}
+
+	p {
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
 
 	&.open {
 		display: block;
+		@include animation(expand 1.5s);
+		@include animation-fill-mode(forwards);
 	}
 }
 
@@ -100,6 +151,10 @@ button {
 #emails {
 	position: relative;
 	margin: 15px 0 10px;
+
+	* {
+		display: inline-block;
+	}
 
 	input {
 		@include size(100%,40px);
@@ -110,6 +165,7 @@ button {
 
 	button {
 		position: absolute;
+		top: 0;
 		right: 0;
 		@include size(190px,40px);
 		background-color: #FF6C5D;
@@ -117,6 +173,29 @@ button {
 		color: #fff;
 		border-top-right-radius: 10px;
 		border-bottom-right-radius: 10px;
+
+		@include transition(all 0.5s ease);
+	}
+
+	.arrow-left {
+		position: absolute;
+		top: 8px;
+		right: 187px;
+		z-index: 9999;
+
+		@include transition(all 0.5s ease);
+	}
+
+	> div:hover {
+
+		button {
+			background-color: darken(#FF6C5D,10%);
+		}
+
+		.arrow-left {
+			border-right: 14px solid darken(#FF6C5D,10%);
+		}
+
 	}
 }
 
@@ -124,7 +203,45 @@ button {
 	color: #ccc;
 
 	li {
-		padding: 0 29px;
+		padding: 0 26px;
+		@include transition(all 0.5s ease);
+
+		&:hover {
+			color: #F9ECB5;
+		}
+
+		&.active {
+			color: #F9ECB5;
+			font-weight: 400;
+		}
+	}
+}
+
+/*********************************
+
+	MEDIA
+
+**********************************/
+
+#media {
+	display: none;
+	// height: 457px;
+	padding-top: 20px;
+
+	h1 {
+		color: #F9ECB5;
+	}
+
+	h4 {
+		margin-top: 20px;
+	}
+
+	a:hover {
+		color: #F9ECB5;
+	}
+
+	&.open {
+		display: block;
 	}
 }
 
@@ -134,38 +251,143 @@ button {
 
 **********************************/
 
+#team {
+	display: none;
+	position: relative;
+	height: 360px;
+	overflow: hidden;
+
+	&.open {
+		display: block;
+
+		#imgWrapper div {
+
+			img {
+				@include animation(imgRise 1s);
+				@include animation-fill-mode(forwards);
+			}
+
+			&:nth-child(2) > img {
+				@include animation-delay(0.2s);
+			}
+
+			&:nth-child(3) > img {
+				@include animation-delay(0.4s);
+			}
+
+			&:nth-child(4) > img {
+				@include animation-delay(0.6s);
+			}
+
+			&:last-of-type > img {
+				@include animation-delay(0.8s);
+			}
+		}
+	}
+}
+
 .bioCont {
-	// display: none;
+	display: none;
+	margin: 30px auto 0;
+	@include animation(bioFall 1.5s);
+	@include animation-fill-mode(forwards);
+
+	&.open {
+		display: block;
+		position: relative;
+		@include animation(bioRise 1s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.bioHeader {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 20px;
+
+	> a {
+		margin-left: 5px;
+		padding-top: 5px;
+
+		&:first-of-type {
+			margin-left: 15px;
+		}
+	}
 }
 
 #imgWrapper {
 	display: inline-flex;
 	display: -webkit-inline-flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-around;
+	position: absolute;
+	bottom: 0;
 	width: 100%;
+	overflow-y: hidden;
 
 	img {
+		position: relative;
+		top: 110px;
 		border-radius: 1000px;
 		opacity: 0.8;
 		cursor: pointer;
+		@include transition(all 0.5s ease);
 
-		&:hover,
-		&.open {
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	div.open {
+		
+		.arrow-up {
+			display: block;
+			@include animation(arrowRise 1.5s);
+			@include animation-fill-mode(forwards);
+			position: relative;
+		}
+
+		img {
 			opacity: 1;
 		}
 	}
 }
 
+.arrow-up {
+	display: none;
+	width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 18px solid #fff;
+	margin: 0 auto 10px;
+}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent; 
+	border-right: 14px solid #FF6C5D; 
+}
+
+/*********************************
+
+	FOOTER
+
+**********************************/
+
 #footer {
 	position: absolute;
 	left: 50%;
-	margin-left: -178px;
+	margin-left: -206px;
 	bottom: 0;
-	width: 60%;
+	width: 75%;
 
 	ul li {
-		padding: 0 5px;
+		padding: 0 10px;
 
 		&:first-of-type {
 			border-right: 0;

@@ -4,7 +4,10 @@
 
 // Reset
 @import "bootstrap/normalize";
+
+// Core Components
 @import "sassFiles/fonts";
+@import "sassFiles/type";
 
 // Page specific components
 @import "sassFiles/home";
