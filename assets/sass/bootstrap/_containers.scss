@@ -66,6 +66,16 @@ a:hover {
 		box-sizing: border-box;
 		@include size(65%,100%);
 		padding-top: 5px;
+		height: 91%;
+
+		#map-canvas {
+
+			> div > div:nth-child(2) {
+				bottom: 95px !important;
+				left: 5px !important;
+			}
+
+		}
 		
 	}
 
@@ -129,7 +139,7 @@ a:hover {
 
 .subMenu {
 	position: absolute;
-	bottom: 80px;
+	bottom: 20px;
 	right: 10px;
 	background: #999;
 	opacity: 0.9;

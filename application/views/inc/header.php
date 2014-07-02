@@ -16,7 +16,7 @@ header( 'Pragma: no-cache' );
 	<meta name="description" content="NEEDED">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="shortcut icon" type="image/x-icon" href=""> -->
+	<?php echo '<link rel="shortcut icon" type="image/x-icon" href="' . base_url() . 'assets/images/favicon.ico">'; ?>
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>

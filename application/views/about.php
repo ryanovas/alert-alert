@@ -10,15 +10,15 @@
 
 		<p>Finally we want to thank the amazing Space Apps Toronto organizers for putting together such a great event; the judges for recognizing our hard work and potential; NASA for being NASA; and a very special thanks to NASA astrophysicist Scott Barthelmy whose  generosity in answering our inquiries was of a great help towards understanding and building the complex technology that helps power SkyWatch.</p>
 
-		<p>See our entrance video here: <a href="http://" target="_blank">bit.ly/1or66XZ</a></p>
+		<p>See our entrance video here: <a href="http://bit.ly/1or66XZ" target="_blank">bit.ly/1or66XZ</a></p>
 
 		<p>The current SkyWatch team is:</p> 
 
 		<ul>
 			<li><a href="https://twitter.com/djagula" target="_blank">Dexter Jagula</a>: IT consultant, entrepreneur, and space enthusiast.</li>
 			<li><a href="https://twitter.com/ryanovasdesign" target="_blank">Ryan Ovas</a>: web designer, developer and co-founder of <a href="https://sproutr.co" target="_blank">Sproutr.</a></li>
-			<li>Roland Sing: Programmer and FIRST Robotics mentor.</li>
-			<li>Stefan Sing: Red Seal carpenter, FIRST robotics mentor.</li>
+			<li><a href="mailto:roland.sing@rogers.com" target="_blank">Roland Sing</a>: Software developer with Critical Mass, formerly with MDA on the Next Generation Canadarm project, and FIRST Robotics mentor.</li>
+			<li><a href="mailto:stefan.sing@gmail.com" target="_blank">Stefan Sing</a>: Red Seal carpenter, FIRST robotics mentor.</li>
 			<li><a href="https://twitter.com/jsliverz" target="_blank">James Slifierz</a>: entrepreneur, builder, space enthusiast and co-founder of <a href="https://sproutr.co" target="_blank">Sproutr.</a></li>
 		</ul>
 

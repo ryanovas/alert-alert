@@ -5,7 +5,7 @@ class Weather_model extends CI_Model {
 	private function getLocation() {
 
 		// $ip = $_SERVER['REMOTE_ADDR'];
-		$ip = '63.142.161.9';
+		$ip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		
 		return $details;
