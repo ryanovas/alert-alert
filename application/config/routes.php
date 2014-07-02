@@ -38,7 +38,11 @@
 |
 */
 
-$route['default_controller'] = "app";
+$default_controller = "app";
+$controller_exceptions = array('app');
+
+$route['default_controller'] = $default_controller;
+$route["^((?!\b".implode('\b|\b', $controller_exceptions)."\b).*)$"] = $default_controller.'/$1';
 $route['404_override'] = '';
 
 
