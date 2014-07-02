@@ -1,6 +1,89 @@
+<!-- <canvas id="canvas"></canvas> -->
+
 <div id="bgGrad">
 
 	<div id="wrapper">
+
+		<div class="starContainer">
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+			<div class="starTop"></div>
+		</div>
+		<div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+			<div class="starRight"></div>
+		</div>
+		<div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+			<div class="starBottom"></div>
+		</div>
+		<div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+			<div class="starLeft"></div>
+		</div>
 
 		<div id="contentCont">
 			<img src="../../assets/images/logo.png" alt="SkyWatch Logo">
@@ -124,7 +207,7 @@
 			</div>
 
 			<div id="menu">
-				<ul><li>What is SkyWatch?</li><li>Media</li><li>Team</li><li class="bold">Prototype</li></ul>
+				<ul><li>What is SkyWatch?</li><li>Media</li><li>Team</li><li class="bold"><?php echo anchor('feed','<span>Prototype</span>') ?></li></ul>
 			</div>
 		</div>
 
