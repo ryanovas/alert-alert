@@ -83,7 +83,43 @@ button {
 	100% {height: 470px;}
 }
 
+@-moz-keyframes expand {
+
+	0% {height: 0px;}
+	100% {height: 470px;}
+}
+
+@-o-keyframes expand {
+
+	0% {height: 0px;}
+	100% {height: 470px;}
+}
+
+@keyframes expand {
+
+	0% {height: 0px;}
+	100% {height: 470px;}
+}
+
 @-webkit-keyframes imgRise {
+
+	0% {top: 110px;}
+	100% {top: 0px;}
+}
+
+@-moz-keyframes imgRise {
+
+	0% {top: 110px;}
+	100% {top: 0px;}
+}
+
+@-o-keyframes imgRise {
+
+	0% {top: 110px;}
+	100% {top: 0px;}
+}
+
+@keyframes imgRise {
 
 	0% {top: 110px;}
 	100% {top: 0px;}
@@ -96,13 +132,70 @@ button {
 	100% {top:0px;opacity:1;}
 }
 
+@-moz-keyframes arrowRise {
+
+	0% {top:20px;opacity:0;}
+	15% {top:20px;opacity:0.1;}
+	100% {top:0px;opacity:1;}
+}
+
+@-o-keyframes arrowRise {
+
+	0% {top:20px;opacity:0;}
+	15% {top:20px;opacity:0.1;}
+	100% {top:0px;opacity:1;}
+}
+
+@keyframes arrowRise {
+
+	0% {top:20px;opacity:0;}
+	15% {top:20px;opacity:0.1;}
+	100% {top:0px;opacity:1;}
+}
+
 @-webkit-keyframes bioRise {
 
 	0% {top: 350px;}
 	100% {top: 0px;}
 }
 
+@-moz-keyframes bioRise {
+
+	0% {top: 350px;}
+	100% {top: 0px;}
+}
+
+@-o-keyframes bioRise {
+
+	0% {top: 350px;}
+	100% {top: 0px;}
+}
+
+@keyframes bioRise {
+
+	0% {top: 350px;}
+	100% {top: 0px;}
+}
+
 @-webkit-keyframes bioFall {
+
+	0% {top: 0px;}
+	100% {top: 350px;}
+}
+
+@-moz-keyframes bioFall {
+
+	0% {top: 0px;}
+	100% {top: 350px;}
+}
+
+@-o-keyframes bioFall {
+
+	0% {top: 0px;}
+	100% {top: 350px;}
+}
+
+@keyframes bioFall {
 
 	0% {top: 0px;}
 	100% {top: 350px;}
@@ -129,7 +222,7 @@ button {
 	border-radius: 1000px;
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 16 {
 	@-webkit-keyframes starTop#{$i} {
 		0% {
 			opacity: 0;
@@ -144,7 +237,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,-500px);
+			@include translate(-1200 + 150 * $i + px,-500px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -164,7 +257,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,-500px);
+			@include translate(-1200 + 150 * $i + px,-500px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -184,7 +277,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,-500px);
+			@include translate(-1200 + 150 * $i + px,-500px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -204,14 +297,14 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,-500px);
+			@include translate(-1200 + 150 * $i + px,-500px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
 	}
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 16 {
 	@-webkit-keyframes starBottom#{$i} {
 		0% {
 			opacity: 0;
@@ -226,7 +319,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,1000px);
+			@include translate(-1200 + 150 * $i + px,1000px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -246,7 +339,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,1000px);
+			@include translate(-1200 + 150 * $i + px,1000px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -266,7 +359,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,1000px);
+			@include translate(-1200 + 150 * $i + px,1000px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -286,7 +379,7 @@ button {
 		}
 
 		100% {
-			@include translate(-1200 + 120 * $i + px,1000px);
+			@include translate(-1200 + 150 * $i + px,1000px);
 			@include square(17px);
 			background-color: #FFFF74;
 		}
@@ -457,14 +550,14 @@ button {
 	}
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 16 {
 	.starTop:nth-child(#{$i}) {
 		@include animation(starTop#{$i} #{5 + ($i * 0.3)}s infinite cubic-bezier(1,.24,.83,.67));
 		@include animation-delay(#{$i * 0.8}s)
 	}
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 16 {
 	.starBottom:nth-child(#{$i}) {
 		@include animation(starBottom#{$i} #{5 + ($i * 0.3)}s infinite cubic-bezier(1,.24,.83,.67));
 		@include animation-delay(#{$i * 0.8}s)
@@ -786,7 +879,17 @@ button {
 		}
 
 		&:nth-child(2) {
+			display: inline-flex;
+			display: -webkit-inline-flex;
 			border-left: 1px solid #ccc;
+
+			a {
+				margin-right: 6px;
+
+				&:nth-child(4) {
+					margin-right: 0;
+				}
+			}
 		}
 
 		a:hover,
