@@ -7,7 +7,7 @@
 		<div class="starContainer">
 			<?php 
 
-			for ($i = 0; $i <= 20; $i++) { 
+			for ($i = 0; $i <= 16; $i++) { 
 				echo '<div class="starTop"></div>';
 			} 
 
@@ -25,7 +25,7 @@
 		<div>
 			<?php 
 
-			for ($i = 0; $i <= 20; $i++) { 
+			for ($i = 0; $i <= 16; $i++) { 
 				echo '<div class="starBottom"></div>';
 			} 
 
@@ -38,7 +38,7 @@
 				echo '<div class="starLeft"></div>';
 			} 
 
-			?>			
+			?>	
 		</div>
 
 		<div id="contentCont">
