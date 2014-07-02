@@ -5,88 +5,44 @@
 	<div id="wrapper">
 
 		<div class="starContainer">
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
+			<?php 
+
+			for ($i = 0; $i <= 20; $i++) { 
+				echo '<div class="starTop"></div>';
+			} 
+
+			?>
 		</div>
 		<div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
+			<?php 
+
+			for ($i = 0; $i <= 16; $i++) { 
+				echo '<div class="starRight"></div>';
+			} 
+
+			?>
 		</div>
 		<div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
+			<?php 
+
+			for ($i = 0; $i <= 20; $i++) { 
+				echo '<div class="starBottom"></div>';
+			} 
+
+			?>
 		</div>
 		<div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
+			<?php 
+
+			for ($i = 0; $i <= 16; $i++) { 
+				echo '<div class="starLeft"></div>';
+			} 
+
+			?>			
 		</div>
 
 		<div id="contentCont">
-			<img src="../../assets/images/logo.png" alt="SkyWatch Logo">
+			<?php echo '<img src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch Logo">'; ?>
 		</div>
 
 		<div id="whatIs">
@@ -203,7 +159,19 @@
 		
 		<div id="controlCont">	
 			<div id="emails">
-				<input type="text" name="email" placeholder="Your Email"><div><div class="arrow-left"></div><button>Sign Up for Private Beta</button></div>
+				<?php 
+
+				$email = array(
+					'name' => 'email',
+					'id' => 'email',
+					'placeholder' => 'Your Email'
+				);
+
+				echo form_input($email);
+				echo '<div><div class="arrow-left"></div><button id="submit">Sign Up for Private Beta</button></div>';
+
+				?>		
+				<div style="display:block;" id="errors"></div>		
 			</div>
 
 			<div id="menu">
@@ -213,7 +181,7 @@
 
 		<div id="footer">
 			<ul>
-				<li>&copySkyWatch 2014</li>
+				<li>&copySkyWatch <?php echo date('Y'); ?></li>
 				<li>
 					<a href="mailto:team@skywatch.co" target="_blank"><span class="socialIcon">circleemail</span></a>
 					<a href="https://twitter.com/SkyWatchApps" target="_blank"><span class="socialIcon">circletwitterbird</span></a>

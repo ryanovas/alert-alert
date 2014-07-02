@@ -137,4 +137,106 @@ $(document).ready(function() {
 
 	});
 
+	function isEmail(email) {
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
+	}
+
+	var submitted = false;
+
+	$('#submit').click(function() {
+
+		if (submitted == true) return;
+		
+		var self = $(this);
+		var email = $('#email').val();
+
+		if (isEmail(email)) {
+
+			console.log('running');
+			
+			var postData = {};
+			postData['email'] = email;
+
+			var http = location.protocol + '//';			
+			var url = http + document.domain + '/app/emailList';
+
+			$.ajax({
+
+				type: 'POST',
+				url: url,
+				data: postData,
+				async: true,
+				beforeSend: function() {
+					self.text('Loading...');
+				},
+
+				success: function(data) {	
+
+					submitted = true;				
+					
+					if (data == 'true') {
+						self.text('Success!');
+						self.css('background', '#16A085');
+						$('.arrow-left').css('border-right', '14px solid #16A085');
+					}
+
+					else {
+						self.text('Email already added');
+
+						setTimeout(function() {
+
+							self.text('Sign Up for Private Beta');
+							submitted = false;
+
+						}, 3000);
+
+					}
+
+				}
+
+			});
+
+		}
+
+		else {
+			$('#errors').html('<p style="text-align:center;width:100%;display:block;margin-top:5px;">Please enter a valid email</p>');
+		}
+
+	});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
