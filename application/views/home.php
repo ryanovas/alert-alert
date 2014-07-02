@@ -5,84 +5,16 @@
 	<div id="wrapper">
 
 		<div class="starContainer">
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
-			<div class="starTop"></div>
+			<div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div><div class="starTop"></div>
 		</div>
 		<div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
-			<div class="starRight"></div>
+			<div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div><div class="starRight"></div>
 		</div>
 		<div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
-			<div class="starBottom"></div>
+			<div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div><div class="starBottom"></div>
 		</div>
 		<div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
-			<div class="starLeft"></div>
+			<div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div><div class="starLeft"></div>
 		</div>
 
 		<div id="contentCont">
