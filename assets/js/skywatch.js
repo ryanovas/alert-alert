@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// LOGO
-	var logo = $('#contentCont > img');
+	var logo = $('#contentCont');
 	
 	// CONTENT
 	var whatIs = $('#whatIs');

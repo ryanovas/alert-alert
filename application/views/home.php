@@ -41,6 +41,7 @@
 
 		<div id="contentCont">
 			<?php echo '<img src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch Logo">'; ?>
+			<a href="http://www.thestar.com/news/gta/2014/05/16/canadian_team_wins_nasa_space_apps_challenge.html" target="_blank"><p>2014 NASA International Space Apps Winner in "Best Use Of Data"</p></a>
 		</div>
 
 		<div id="whatIs">

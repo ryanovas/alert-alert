@@ -634,9 +634,22 @@ button {
 		width: 300px;
 		margin: 10px auto;
 		@include transition(all 1.5s ease);
+	}
 
-		&.contentOpen {
+	p {
+		text-align: center;
+		color: #F9ECB5;
+		font-weight: 400;
+	}
+
+	&.contentOpen {
+		
+		img {
 			width: 150px;
+		}
+		
+		a {
+			display: none;
 		}
 	}
 }

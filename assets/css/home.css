@@ -5616,8 +5616,14 @@ button {
   margin: 10px auto;
   -webkit-transition: all 1.5s ease;
   transition: all 1.5s ease; }
-  #contentCont > img.contentOpen {
-    width: 150px; }
+#contentCont p {
+  text-align: center;
+  color: #F9ECB5;
+  font-weight: 400; }
+#contentCont.contentOpen img {
+  width: 150px; }
+#contentCont.contentOpen a {
+  display: none; }
 
 #whatIs {
   display: none;
