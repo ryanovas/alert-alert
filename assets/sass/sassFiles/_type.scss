@@ -1,0 +1,135 @@
+/*********************************
+
+	Font elements
+
+**********************************/
+
+h1, h2,
+h3, h4,
+p {
+	margin: 0;
+	padding: 0; 
+}
+
+h1 {
+	font-size: $h1-size-default;
+	color: $h1-color;
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+
+	@media (max-width: $screen-sm){
+		font-size: $h1-size-tablet;
+	}
+
+	@media (max-width: $nexus4-max){
+		font-size: $h1-size-nexus4;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $h1-size-phone;
+	}
+}
+
+h2 {
+	font-size: $h2-size-default;
+	color: $h2-color;
+	font-family: 'Roboto';
+	font-weight: 700;
+
+	@media (max-width: $screen-sm){
+		font-size: $h2-size-tablet;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $h2-size-phone;
+	}
+}
+
+h3 {
+	font-size: $h3-size-default;
+	color: $h3-color;
+	font-family: 'Roboto Slab';
+	font-weight: 400;
+
+	@media (max-width: $screen-sm){
+		font-size: $h3-size-tablet;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $h3-size-phone;
+	}
+}
+
+h4 {
+	font-size: $h4-size-default;
+	color: $h4-color;
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+	letter-spacing: 0.5px;
+
+	@media (max-width: $screen-sm){
+		font-size: $h4-size-tablet;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $h4-size-phone;
+	}
+}
+
+ul,
+ol,
+p {
+	font-size: $p-size-default;
+	color: $p-color;
+	font-family: 'Roboto';
+	font-weight: 300;
+	letter-spacing: 1px;
+
+	@media (max-width: $screen-sm){
+		font-size: $p-size-tablet;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $p-size-phone;
+	}
+}
+
+p {
+
+	@media (max-width: $screen-sm){
+		line-height: $p-size-tablet * 1.8;
+	}
+
+	@media (max-width: $iphone-max){
+		line-height: $p-size-phone * 1.8;
+	}
+
+}
+
+a {
+	font-family: 'Roboto';
+	color: $a-color;
+	text-decoration: none;
+	@include transition(all 0.3s ease);
+	&:hover {
+		color: $brand-primary;}
+
+	@media (max-width: $screen-sm){
+		font-size: $p-size-tablet;
+	}
+
+	@media (max-width: $iphone-max){
+		font-size: $p-size-phone;
+	}
+}
+
+/*********************************
+
+	List Types
+
+**********************************/
+
+.bold {
+	font-family: 'Roboto';
+	font-weight: 700;
+}
