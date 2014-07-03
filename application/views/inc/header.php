@@ -21,7 +21,6 @@ header( 'Pragma: no-cache' );
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 	
-	<?php echo '<link href="' . base_url() . 'assets/css/home.css?v1.2" rel="stylesheet" type="text/css">'; ?>
 	<?php 
 		if (isset($css)) {
 			foreach ($css as $rule) {
