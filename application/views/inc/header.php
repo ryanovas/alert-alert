@@ -12,11 +12,11 @@ header( 'Pragma: no-cache' );
 <head>
 	<meta http-equiv="content-language" content="en"; charset="UTF-8">
 	<title>SkyWatch - the way our skies were meant to be discovered</title>
-	<meta name="keywords" content="NEEDED">	
-	<meta name="description" content="NEEDED">
+	<meta name="keywords" content="space, NASA, data, telescopes, astronomy, SkyWatch, skies, stars">	
+	<meta name="description" content="See what's happening in the sky right now. 2014 NASA International Space Apps Winner in Best Use Of Data">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="shortcut icon" type="image/x-icon" href=""> -->
+	<?php echo '<link rel="shortcut icon" type="image/x-icon" href="' . base_url() . 'assets/images/favicon.ico">'; ?>
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
