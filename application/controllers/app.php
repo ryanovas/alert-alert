@@ -32,7 +32,8 @@ class App extends CI_Controller {
 
 		$data = array(
 			'main_content' => 'home',
-			'current' => 'Home'
+			'current' => 'Home',
+			'css' => array('home.css')
 		);
 
 		$this->load->view('inc/template', $data);
@@ -68,6 +69,7 @@ class App extends CI_Controller {
 			'voevents' => $voevents,
 			'main_content' => 'feed',
 			'current' => 'Feed',
+			'css' => array('feed.css'),
 			'js' => array('viewController.js', 'share.min.js', 'jquery.urlshortener.min.js')
 		);
 

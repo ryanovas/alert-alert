@@ -335,6 +335,10 @@ a {
 body {
   background-color: #181D20;
   overflow: hidden; }
+  @media (max-width: 768px) {
+    body {
+      height: 890px;
+      overflow-y: auto; } }
 
 a {
   text-decoration: none;
@@ -370,6 +374,12 @@ button {
   width: 100%;
   height: 100%;
   background: repeating-radial-gradient(circle at 50% 25%, rgba(249, 236, 181, 0.6), rgba(249, 236, 181, 0)); }
+  @media (max-height: 750px) {
+    #bgGrad {
+      position: relative; } }
+  @media (max-width: 768px) {
+    #bgGrad {
+      height: 890px; } }
 
 #wrapper {
   display: block;
@@ -383,6 +393,9 @@ button {
   transition: all 1.5s ease; }
   #wrapper.contentOpen {
     padding-top: 30px; }
+  @media (max-width: 539px) {
+    #wrapper {
+      padding-top: 50px; } }
 
 /*********************************
 
@@ -415,7 +428,35 @@ button {
     height: 0px; }
 
   100% {
-    height: 470px; } }
+    height: 490px; } }
+
+@-webkit-keyframes expandMobile {
+  0% {
+    height: 0px; }
+
+  100% {
+    height: auto; } }
+
+@-moz-keyframes expandMobile {
+  0% {
+    height: 0px; }
+
+  100% {
+    height: auto; } }
+
+@-o-keyframes expandMobile {
+  0% {
+    height: 0px; }
+
+  100% {
+    height: auto; } }
+
+@keyframes expandMobile {
+  0% {
+    height: 0px; }
+
+  100% {
+    height: auto; } }
 
 @-webkit-keyframes imgRise {
   0% {
@@ -439,10 +480,10 @@ button {
     top: 0px; } }
 
 @keyframes imgRise {
-  0% {
+  from {
     top: 110px; }
 
-  100% {
+  to {
     top: 0px; } }
 
 @-webkit-keyframes arrowRise {
@@ -5594,6 +5635,10 @@ button {
     animation: expand 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
+    @media (max-width: 768px) {
+      #whatIs.open {
+        -webkit-animation: expandMobile 1.5s forwards;
+        animation: expandMobile 1.5s forwards; } }
 
 #emails {
   position: relative;
@@ -5605,7 +5650,7 @@ button {
     height: 40px;
     border: 0;
     border-radius: 10px;
-    padding: 10px; }
+    padding: 10px 200px 10px 10px; }
   #emails button {
     position: absolute;
     top: 0;
@@ -5630,6 +5675,15 @@ button {
     background-color: #ff3e2a; }
   #emails > div:hover .arrow-left {
     border-right: 14px solid #ff3e2a; }
+  @media (max-width: 539px) {
+    #emails button {
+      width: 148px;
+      font-size: 12px; }
+    #emails .arrow-left {
+      right: 145px; }
+    #emails input {
+      font-size: 12px;
+      padding-right: 165px; } }
 
 #menu {
   color: #ccc; }
@@ -5645,6 +5699,12 @@ button {
       color: #fff; }
       #menu li a:hover {
         color: #F9ECB5; }
+  @media (max-width: 500px) {
+    #menu ul {
+      flex-direction: column; }
+      #menu ul li {
+        padding: 10px 0;
+        border-right: none; } }
 
 /*********************************
 
@@ -5657,7 +5717,7 @@ button {
   #media h1 {
     color: #F9ECB5; }
   #media h4 {
-    margin-top: 20px; }
+    margin-top: 14px; }
   #media a:hover {
     color: #F9ECB5; }
   #media.open {
@@ -5676,10 +5736,10 @@ button {
   #team.open {
     display: block; }
     #team.open #imgWrapper div img {
-      -webkit-animation: imgRise 1s;
-      animation: imgRise 1s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards; }
+      -webkit-animation: imgRise 1s forwards;
+      animation: imgRise 1s forwards; }
+      #team.open #imgWrapper div img:hover {
+        top: 0px; }
     #team.open #imgWrapper div:nth-child(2) > img {
       -webkit-animation-delay: 0.2s;
       animation-delay: 0.2s; }
@@ -5741,6 +5801,12 @@ button {
     transition: all 0.5s ease; }
     #imgWrapper img:hover {
       opacity: 1; }
+    @media (max-width: 534px) {
+      #imgWrapper img {
+        width: 70px; } }
+    @media (max-width: 383px) {
+      #imgWrapper img {
+        width: 59px; } }
   #imgWrapper div.open .arrow-up {
     display: block;
     -webkit-animation: arrowRise 1.5s;
@@ -5773,24 +5839,42 @@ button {
 
 **********************************/
 #footer {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  align-items: center;
   position: absolute;
   left: 50%;
   margin-left: -206px;
   bottom: 0;
-  width: 75%; }
-  #footer ul li {
-    padding: 0 10px; }
-    #footer ul li:first-of-type {
-      border-right: 0;
-      cursor: default; }
-    #footer ul li:nth-child(2) {
-      display: inline-flex;
-      display: -webkit-inline-flex;
-      border-left: 1px solid #ccc; }
-      #footer ul li:nth-child(2) a {
-        margin-right: 6px; }
-        #footer ul li:nth-child(2) a:nth-child(4) {
-          margin-right: 0; }
-    #footer ul li a:hover,
-    #footer ul li span:hover {
-      color: #fff; }
+  width: 75%;
+  padding: 10px; }
+  #footer > p {
+    color: #ccc;
+    cursor: default; }
+    @media (max-width: 340px) {
+      #footer > p {
+        font-size: 10px; } }
+  #footer > div {
+    display: inline-flex;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin: 0 6px;
+    padding: 0 6px; }
+    #footer > div a {
+      margin-right: 6px; }
+      #footer > div a:nth-child(4) {
+        margin-right: 0; }
+  #footer a:hover,
+  #footer span:hover {
+    color: #fff; }
+  @media (max-height: 750px) {
+    #footer {
+      position: relative;
+      margin-top: 100px; } }
+  @media (max-width: 500px) {
+    #footer {
+      width: 100%;
+      left: auto;
+      margin-left: 0;
+      margin: 80px auto 0;
+      justify-content: space-around; } }
