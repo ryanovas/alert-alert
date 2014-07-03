@@ -1,7 +1,9 @@
-	<div class="share"></div>
+	<?php echo anchor('home', '<img style="height:65px;margin:3px;" src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch Logo">'); ?>
 
 	<div id="modalCover">
 	</div>
+
+	<div id="mobile"><p>Sorry, but your screen should be at least 1450px wide to view this prototype.</p></div>
 
 	<div id="filterModal">
 		<h1>Filter by:</h1>

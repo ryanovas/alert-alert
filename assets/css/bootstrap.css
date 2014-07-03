@@ -271,6 +271,9 @@ html, body, #map-canvas {
 
 body {
   overflow: hidden; }
+  @media (max-width: 768px) {
+    body {
+      height: 890px; } }
 
 a {
   color: white !important; }
@@ -462,6 +465,17 @@ a:hover {
       .about .aboutCont a:hover {
         color: #c7d0d9 !important; }
 
+@media (max-width: 1450px) {
+  #mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #415160;
+    text-align: center;
+    z-index: 9999; }
+    #mobile p {
+      color: #fff;
+      margin-top: 10%; } }
 .feedCard {
   display: block;
   position: relative;

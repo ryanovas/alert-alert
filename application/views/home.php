@@ -1,5 +1,3 @@
-<!-- <canvas id="canvas"></canvas> -->
-
 <div id="bgGrad">
 
 	<div id="wrapper">
@@ -43,6 +41,7 @@
 
 		<div id="contentCont">
 			<?php echo '<img src="' . base_url() . 'assets/images/logo.png" alt="SkyWatch Logo">'; ?>
+			<a href="http://www.thestar.com/news/gta/2014/05/16/canadian_team_wins_nasa_space_apps_challenge.html" target="_blank"><p>2014 NASA International Space Apps Winner in "Best Use Of Data"</p></a>
 		</div>
 
 		<div id="whatIs">
@@ -59,15 +58,17 @@
 			<h1>SkyWatch in the Media</h1>
 
 			<h4>NASA Announces Winners of the 2014 International Space Apps Challenge</h4>
-			<a href="http://www.nasa.gov/press/2014/may/nasa-announces-global-award-winners-of-the-2014-international-space-apps-challenge/#.U7HzOvldXoY">NASA</a><br>
+			<a href="http://www.nasa.gov/press/2014/may/nasa-announces-global-award-winners-of-the-2014-international-space-apps-challenge/#.U7HzOvldXoY" target="_blank">NASA</a><br>
 			<h4>Canadian Team Wins NASA SpaceApps Challenge</h4>
-			<a href="http://www.thestar.com/news/gta/2014/05/16/canadian_team_wins_nasa_space_apps_challenge.html">The Toronto Star</a><br>
+			<a href="http://www.thestar.com/news/gta/2014/05/16/canadian_team_wins_nasa_space_apps_challenge.html" target="_blank">The Toronto Star</a><br>
 			<h4>Black Holes and Supernovas Are Getting the Google Maps Treatment</h4>
-			<a href="http://motherboard.vice.com/read/black-holes-and-supernovas-are-getting-the-google-map-treatment">Motherboard</a><br>
+			<a href="http://motherboard.vice.com/read/black-holes-and-supernovas-are-getting-the-google-map-treatment" target="_blank">Motherboard</a><br>
+			<h4>Track the majesty of outer space with SkyWatch</h4>
+			<a href="http://www.engadget.com/2014/05/28/skywatch-software-galactic-events/" target="_blank">Engadget</a><br>
 			<h4>The 'Google Maps' for SPACE: Skywatch app lets you witness supernovas and comets in real time</h4>
-			<a href="http://www.dailymail.co.uk/sciencetech/article-2640497/The-Google-Maps-SPACE-Skywatch-app-lets-witness-supernovas-comets-real-time.html">Daily Mail</a><br>
+			<a href="http://www.dailymail.co.uk/sciencetech/article-2640497/The-Google-Maps-SPACE-Skywatch-app-lets-witness-supernovas-comets-real-time.html" target="_blank">Daily Mail</a><br>
 			<h4>CDN "SkyWatch" wins "Best Use of Data" at Int'l Space Apps Challenge</h4>
-			<a href="http://acuriousguy.blogspot.ca/2014/05/cdn-skywatch-wins-best-use-of-data-at.html">The Commercial Space Blog</a><br>
+			<a href="http://acuriousguy.blogspot.ca/2014/05/cdn-skywatch-wins-best-use-of-data-at.html" target="_blank">The Commercial Space Blog</a><br>
 			
 		</div>
 
@@ -180,16 +181,14 @@
 		</div>
 
 		<div id="footer">
-			<ul>
-				<li>&copySkyWatch <?php echo date('Y'); ?></li>
-				<li>
-					<a href="mailto:team@skywatch.co" target="_blank"><span class="socialIcon">circleemail</span></a>
-					<a href="https://twitter.com/SkyWatchApps" target="_blank"><span class="socialIcon">circletwitterbird</span></a>
-					<a href="#" target="_blank"><span class="socialIcon">circleinstagram</span></a>
-					<a href="#" target="_blank"><span class="socialIcon">circlegoogleplus</span></a>
-				</li>
-				<li><a href="mailto:team@skywatch.co">Contact Us</a></li>
-			</ul>
+			<p>&copySkyWatch <?php echo date('Y'); ?></p>
+			<div>
+				<a href="mailto:team@skywatch.co" target="_blank"><span class="socialIcon">circleemail</span></a>
+				<a href="https://twitter.com/SkyWatchApps" target="_blank"><span class="socialIcon">circletwitterbird</span></a>
+				<a href="https://plus.google.com/u/1/112613462566974118146/posts?hl=en-GB" target="_blank"><span class="socialIcon">circlegoogleplus</span></a>
+				<a href="http://instagram.com/skywatchapps" target="_blank"><span class="socialIcon">circleinstagram</span></a>
+			</div>
+			<a href="mailto:team@skywatch.co">Contact Us</a>
 		</div>
 
 	</div>
