@@ -588,6 +588,82 @@
 				</div>
 			</div>
 
+			<div class="row">
+
+				<div class="col4">
+
+					<div id="marketNumbers1" style="height: 300px;"></div>
+					<script>
+
+						new Morris.Donut({
+						  // ID of the element in which to draw the chart.
+						  element: 'marketNumbers1',
+						  // Chart data records -- each entry in this array corresponds to a point on
+						  // the chart.
+						  data: [
+						    { label: 'Gr.9 Students in Public School', value: 4700000 },
+						    { label: 'Gr.9 Students in Private School', value: 450000 },
+						    { label: 'Gr.9 Students Homeschooled', value: 150000 },
+						  ],
+						  colors: ['#7fac9d', '#ee779e', '#91daef'],
+						  labelColor: '#fff',
+						  resize: true,
+						});
+
+					</script>
+
+				</div>
+
+				<div class="col4">
+
+					<div id="marketNumbers2" style="height: 300px;"></div>
+					<script>
+
+						new Morris.Donut({
+						  // ID of the element in which to draw the chart.
+						  element: 'marketNumbers2',
+						  // Chart data records -- each entry in this array corresponds to a point on
+						  // the chart.
+						  data: [
+						    { label: 'Gr.9 Students in Public School', value: 4700000 },
+						    { label: 'Gr.9 Students in Private School', value: 450000 },
+						    { label: 'Gr.9 Students Homeschooled', value: 150000 },
+						  ],
+						  colors: ['#7fac9d', '#ee779e', '#91daef'],
+						  labelColor: '#fff',
+						  resize: true,
+						});
+
+					</script>
+
+				</div>
+
+				<div class="col4">
+
+					<div id="marketNumbers3" style="height: 300px;"></div>
+					<script>
+
+						new Morris.Donut({
+						  // ID of the element in which to draw the chart.
+						  element: 'marketNumbers3',
+						  // Chart data records -- each entry in this array corresponds to a point on
+						  // the chart.
+						  data: [
+						    { label: 'Gr.9 Students in Public School', value: 4700000 },
+						    { label: 'Gr.9 Students in Private School', value: 450000 },
+						    { label: 'Gr.9 Students Homeschooled', value: 150000 },
+						  ],
+						  colors: ['#7fac9d', '#ee779e', '#91daef'],
+						  labelColor: '#fff',
+						  resize: true,
+						});
+
+					</script>
+
+				</div>
+
+			</div>
+
 		</div>
 
 	</div>
