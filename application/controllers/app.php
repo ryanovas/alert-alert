@@ -32,10 +32,40 @@ class App extends CI_Controller {
 
 		$data = array(
 			'main_content' => 'home',
-			'current' => 'Home'
+			'current' => 'Home',
+			'css' => array('home.css')
 		);
 
 		$this->load->view('inc/template', $data);
+
+	}
+
+	public function pitch() {
+
+		$data = array(
+			'main_content' => 'pitch',
+			'current' => 'Pitch',
+			'css' => array('pitch.css'),
+			'js' => array('pitch.js')
+		);
+
+		$this->load->view('inc/template', $data);
+
+	}
+
+	public function emailList() {
+
+		$email = $this->input->post('email');
+		$q = $this->db->get_where('emails', array('Email' => $email));
+
+		if ($q->num_rows > 0) die('false');
+
+		$data = array(
+			'Email' => $email,
+			'Date' => date('Y-m-d H:i:s', now())
+		);
+
+		if ($this->db->insert('emails', $data)) die('true');
 
 	}
 
@@ -52,6 +82,7 @@ class App extends CI_Controller {
 			'voevents' => $voevents,
 			'main_content' => 'feed',
 			'current' => 'Feed',
+			'css' => array('feed.css'),
 			'js' => array('viewController.js', 'share.min.js', 'jquery.urlshortener.min.js')
 		);
 
