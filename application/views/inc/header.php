@@ -16,7 +16,7 @@ header( 'Pragma: no-cache' );
 	<meta name="description" content="See what's happening in the sky right now. 2014 NASA International Space Apps Winner in Best Use Of Data">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php echo '<link rel="shortcut icon" type="image/x-icon" href="' . base_url() . 'assets/images/favicon.ico">'; ?>
+	<?php echo '<link rel="shortcut icon" type="image/x-icon" href="' . base_url() . 'assets/images/favicon.ico?v=' . time() . '">'; ?>
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -33,6 +33,9 @@ header( 'Pragma: no-cache' );
 	<?php echo '<script src="' . base_url() . 'assets/js/share.min.js"></script>'; ?>
 	<?php echo '<script src="' . base_url() . 'assets/js/skywatch.js"></script>'; ?>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	<script src="http://cdn.oesmith.co.uk/morris-0.5.1.min.js"></script>
 	<?php 
 		if (isset($js)) {
 			foreach ($js as $rule) {

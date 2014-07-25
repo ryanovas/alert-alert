@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 // $db['default']['hostname'] = '173.254.28.136';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'ryanovas_admin';
+$db['default']['username'] = 'root';
 $db['default']['password'] = 'MBIGoldey5!@#';
 $db['default']['database'] = 'ryanovas_skywatch';
 $db['default']['dbdriver'] = 'mysql';

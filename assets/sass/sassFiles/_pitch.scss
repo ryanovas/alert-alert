@@ -1,0 +1,317 @@
+// Variables
+$margin: 1080px;
+$highlight: #7fac9d;
+$background: #5e6973;
+
+h2 {
+	font-size: 40px;
+	font-family: 'Roboto';
+	color: white;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Roboto';
+}
+
+p.margin {
+	margin-top: 20px;
+}
+
+.allCaps {
+	text-transform: uppercase;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+	background-color: #181D20;
+}
+
+#bgGrad {
+	position: absolute;
+	z-index: -9999;
+	width: 100%;
+	background: 
+	    repeating-radial-gradient(
+	      circle at 50% 25%, 
+	      rgba(62,76,87,0.9),
+	      rgba(62,76,87,0.4)
+	    );
+}
+
+.slide {
+	text-align: left;
+	@include box-sizing(border-box);
+	padding: 10px 0;
+	position: relative;
+
+	.logoTitle {
+		img {
+			height: 70px;
+		}
+
+		h1 {
+			position: relative;
+			top: 5px;
+			right: 15px;
+			font-size: $h1-size-default !important;
+		}
+
+		img, h1 {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+#title {
+	@include square(100%);
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 50%;
+		margin-top: -120px;
+		left: 50%;
+		margin-left: -310px;
+	}
+}
+
+#prologue {
+	.nasaStats{
+		margin-top: 60px;
+
+		.nasa {
+			text-align: center; 
+			margin-left: 12%;
+		}
+	}
+}
+
+#problem {
+	.earth {
+		height: 180px;
+	}
+
+	.ground {
+		height: 150px; 
+		margin: 25px;
+	}
+
+	.dataText {
+		text-align: center;
+		padding-top: 35px;
+	}
+
+	.galaxies {
+		margin-top: 15px;
+	}
+
+	.events {
+		margin-top: 10px;
+	}
+
+	.arrow {
+		margin-top: 20px;
+	}
+}
+
+#problem2 {
+	.astronomers {
+		position: absolute;
+		top: 50%;
+		margin-top: -102px;
+		left: 50%;
+		margin-left: -540px;
+
+		.guy {
+			position: relative;
+			bottom: 50px;
+		}
+
+		.news {
+			position: relative;
+			bottom: 30px;
+		}
+	}
+}
+
+#problem3 {
+	.questions {
+		position: absolute;
+		top: 50%;
+		margin-top: -98px;
+		left: 50%;
+		margin-left: -347.5px;
+
+		.people {
+			display: inline-block;
+			vertical-align: middle;
+
+			.questionPerson {
+				width: 46px;
+				text-align: center;
+				display: inline-block;
+				vertical-align: middle;
+
+				&.boost {
+					position: relative;
+					bottom: 30px;
+				}
+			}
+		}
+
+		.questionText {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 50px;
+
+			h1 {
+				font-size: 50px;
+			}
+		}
+	}
+}
+
+#solution {
+
+	.boost {
+		position: relative;
+		bottom: 30px;
+	}
+
+	.wave {
+		margin-top: 80px;
+	}
+
+	.people {
+		margin-top: 50px;
+	}
+
+	.solutionText {
+		padding-top: 25px;
+
+		p {
+			width: 550px;
+			display: inline-block;
+			margin: 15px 30px 15px 0;
+		}
+	}
+
+}
+
+#market {
+	.need {
+		margin-left: 140px;
+	}
+}
+
+#market2 {
+	.morris-hover-row-label {
+		color: white;
+	}
+}
+
+.container {
+	width: $margin;
+	margin: 0 auto;
+
+	.row {
+		width: 100%;
+		clear: both;
+		position: relative;
+
+		@for $i from 1 through 12 {
+			.col#{$i} {
+				@include box-sizing(border-box);
+				float: left;
+				width: $i * 8.333333%;
+				padding: 0 10px;
+
+				img, .inlineCont {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				h1 {
+					font-size: 65px;
+				}
+
+				p {
+					font-size: 18px;					
+				}
+
+				&.leftBorder {
+					border-left: solid $highlight 5px;
+					padding: 20px 10px;
+					margin: -20px 0;
+				}	
+			}
+		}
+
+		.header {
+			border-top: solid $highlight 5px;
+			margin: 20px 0;
+			padding: 0;
+
+			div {
+				background: $highlight;
+				padding: 0 5px 5px 5px;
+				color: $background;
+				font-family: 'Roboto';
+				font-size: 18px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
