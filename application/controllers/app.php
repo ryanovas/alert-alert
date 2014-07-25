@@ -40,6 +40,19 @@ class App extends CI_Controller {
 
 	}
 
+	public function pitch() {
+
+		$data = array(
+			'main_content' => 'pitch',
+			'current' => 'Pitch',
+			'css' => array('pitch.css'),
+			'js' => array('pitch.js')
+		);
+
+		$this->load->view('inc/template', $data);
+
+	}
+
 	public function emailList() {
 
 		$email = $this->input->post('email');

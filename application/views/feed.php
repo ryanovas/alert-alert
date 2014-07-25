@@ -3,7 +3,7 @@
 	<div id="modalCover">
 	</div>
 
-	<div id="mobile"><p>Sorry, but your screen should be at least 1450px wide to view this prototype.</p></div>
+	<!-- <div id="mobile"><p>Sorry, but your screen should be at least 1450px wide to view this prototype.</p></div> -->
 
 	<div id="filterModal">
 		<h1>Filter by:</h1>
