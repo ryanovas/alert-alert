@@ -28,6 +28,20 @@ class App extends CI_Controller {
 
 	}
 
+	private function is_logged_in() {
+
+		// check session for data
+		$is_logged_in = $this->session->userdata('is_logged_in');
+
+		if ($is_logged_in) {
+			return true;
+		}
+
+		else {
+			return false;
+		}
+	}
+
 	public function home() {
 
 		$data = array(
@@ -40,7 +54,43 @@ class App extends CI_Controller {
 
 	}
 
+	public function login($error = false) {
+
+		$data = array(
+			'main_content' => 'login',
+			'current' => 'Login',
+			'css' => array('login.css'),
+			'js' => null,
+			'error' => $error
+		);
+
+		$this->load->view('inc/template', $data);
+
+	}
+
+	public function login_check() {
+
+		$pass = $this->input->post('pass');
+
+		if ($pass === 'SkyWatch123!@#') {			
+			$data = array(
+				'is_logged_in' => true
+			);
+
+			$this->session->set_userdata($data);
+
+			redirect('pitch');
+		}
+
+		else {
+			$this->login(true);
+		}
+
+	}
+
 	public function pitch() {
+
+		if (!$this->is_logged_in()) redirect('login');
 
 		$data = array(
 			'main_content' => 'pitch',

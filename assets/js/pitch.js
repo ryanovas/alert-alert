@@ -22,6 +22,7 @@ var contents = [
 	'solution',
 	'product',
 	'product2',
+	'product3',
 	'market',
 	'market2',
 	'market3',
@@ -52,6 +53,15 @@ $(document).ready(function() {
 
 	// Set current variable
 	setCurrent(display.scrollTop);
+
+	// Open and close popup
+	setTimeout(function() {
+		$('#infoPopup').removeClass('hide noPointer');
+	}, 800);
+
+	$('#popupClose').click(function() {
+		$('#infoPopup').addClass('hide noPointer');
+	});
 
 	// Move screen when up or down arrow pushed
 	$(window).on('keydown', function(event) {
@@ -108,6 +118,59 @@ $(document).ready(function() {
 
 					break;
 
+				case 'market3':
+					
+					if (!steps.market3 || steps.market3 < 1) {
+						steps.market3 = 1;
+						if (!animated.marketHeader3) extendHeader('marketHeader3');
+						if (!animated.teachersInterviewed) show('teachersInterviewed');
+						if (!animated.marketLooper3) looperOpen('marketLooper3', 100);
+					}
+
+					else if (steps.market3 == 1) {
+						steps.market3 = 2;
+						if (!animated.marketHeader4) extendHeader('marketHeader4');
+						if (!animated.teachersInterviewed2) show('teachersInterviewed2');
+						if (!animated.marketLooper4) looperOpen('marketLooper4', 100);
+					}
+
+					else if (steps.market3 == 2) {
+						steps.market3 = 3;
+						if (!animated.marketHeader5) extendHeader('marketHeader5');
+						if (!animated.techGraph) show('techGraph');
+					}
+
+					break;
+
+				case 'market4':
+					
+					if (!steps.market4 || steps.market4 < 1) {
+						steps.market4 = 1;
+						if (!animated.marketHeader7) extendHeader('marketHeader7');
+						if (!animated.marketLooper6) looperOpen('marketLooper6', 100);						
+					}
+
+					break;
+
+				case 'revenue':
+					
+					if (!steps.revenue || steps.revenue < 1) {
+						steps.revenue = 1;
+						if (!animated.revenueLooper) looperOpen('revenueLooper', 200);
+					}
+
+					else if (steps.revenue == 1) {
+						steps.revenue = 2;
+						if (!animated.revenueLooper2) looperOpen('revenueLooper2', 200);
+					}
+
+					else if (steps.revenue == 2) {
+						steps.revenue = 3;
+						if (!animated.revenueLooper3) looperOpen('revenueLooper3', 200);
+					}
+
+					break;
+
 			}
 
 			console.log(steps);
@@ -145,6 +208,63 @@ $(document).ready(function() {
 						setTimeout(function() {
 							if (animated.galaxies) looperClose('galaxies', 80);
 						}, 720);
+					}
+
+					break;
+
+				case 'market3':
+					
+					if (steps.market3 == 1) {
+						steps.market3 = 0;
+						if (animated.marketHeader3) retractHeader('marketHeader3');
+						if (animated.marketLooper3) looperClose('marketLooper3', 100);
+						setTimeout(function() {
+							if (animated.teachersInterviewed) hide('teachersInterviewed');
+						}, 1000);
+					}
+
+					else if (steps.market3 == 2) {
+						steps.market3 = 1;
+						if (animated.marketHeader4) retractHeader('marketHeader4');
+						if (animated.marketLooper4) looperClose('marketLooper4', 100);
+						setTimeout(function() {
+							if (animated.teachersInterviewed2) hide('teachersInterviewed2');
+						}, 1000);
+					}
+
+					else if (steps.market3 == 3) {
+						steps.market3 = 2;
+						if (animated.marketHeader5) retractHeader('marketHeader5');
+						if (animated.techGraph) hide('techGraph');
+					}
+
+					break;
+
+				case 'market4':
+
+					if (steps.market4 == 1) {
+						steps.market4 = 0;
+						if (animated.marketHeader7) retractHeader('marketHeader7');
+						if (animated.marketLooper6) looperClose('marketLooper6', 200);
+					}
+
+					break;
+
+				case 'revenue':
+					
+					if (steps.revenue == 1) {
+						steps.revenue = 0;
+						if (animated.revenueLooper) looperClose('revenueLooper', 200);
+					}
+
+					else if (steps.revenue == 2) {
+						steps.revenue = 1;
+						if (animated.revenueLooper2) looperClose('revenueLooper2', 200);
+					}
+
+					else if (steps.revenue == 3) {
+						steps.revenue = 2;
+						if (animated.revenueLooper3) looperClose('revenueLooper3', 200);
 					}
 
 					break;
@@ -213,6 +333,122 @@ $(window).scroll(function() {
 		if (!animated.problem2Parts) looperOpen('problem2Parts', 200);
 	}
 
+	if (display.scrollTop >= display.height * contents.indexOf('problem3')) {
+		if (!animated.questionGuy) looperOpen('questionGuy', 150);
+		
+		setTimeout(function() {
+			if (!animated.questionMark) looperOpen('questionMark', 150);
+		}, 150);
+
+		setTimeout(function() {
+			if (!animated.questionText) show('questionText');
+		}, 1050);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('solution')) {
+
+		if (!animated.solutionImg) looperOpen('solutionImg', 200);
+
+		setTimeout(function() {
+			if (!animated.solutionText) show('solutionText');
+		}, 800);
+
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('product')) {
+
+		if (!animated.productLooper) looperOpen('productLooper', 200);
+
+		setTimeout(function() {
+			if (!animated.productText) show('productText');
+		}, 800);
+
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('product2')) {
+
+		if (!animated.productLooper2) looperOpen('productLooper2', 200);
+
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('product')) {
+		if (!animated.productHeader1) extendHeader('productHeader1');
+		if (!animated.productText) looperOpen('productText', 400);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('product3')) {
+		if (!animated.productHeader2) extendHeader('productHeader2');
+		if (!animated.dataFlow) animateTimeline('dataFlow', 200);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('market')) {
+		if (!animated.marketHeader1) extendHeader('marketHeader1');
+		if (!animated.marketLooper1) looperOpen('marketLooper1', 300);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('market2')) {
+		if (!animated.marketHeader2) extendHeader('marketHeader2');
+		if (!animated.marketLooper2) looperOpen('marketLooper2', 300);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('market4')) {
+		if (!animated.marketHeader6) extendHeader('marketHeader6');
+		if (!animated.marketLooper5) looperOpen('marketLooper5', 200);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('revenue')) {
+		if (!animated.revenueHeader) extendHeader('revenueHeader');
+		if (!animated.revImg) looperOpen('revImg', 400);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('revenue2')) {
+		if (!animated.revenueHeader2) extendHeader('revenueHeader2');
+		if (!animated.revenueChart) show('revenueChart');
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('cost')) {
+		if (!animated.costHeader) extendHeader('costHeader');
+		if (!animated.costStructure) show('costStructure');
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('risk')) {
+		if (!animated.riskLooper) looperOpen('riskLooper', 400);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('team')) {
+		if (!animated.supernova) show('supernova');
+
+		setTimeout(function() {
+			if (!animated.teampic) show('teampic');
+		}, 800);
+
+		setTimeout(function() {
+			if (!animated.teamRow) show('teamRow');
+			if (!animated.teamColumn) looperOpen('teamColumn', 200);
+		}, 1200);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('timeline')) {
+		if (!animated.devTime) animateTimeline('devTime', 200);
+	}
+
+	if (display.scrollTop >= display.height * contents.indexOf('questions')) {
+		if (!animated.finalImage) show('finalImage');
+	}
+
+	// Fix supernova
+	if (display.scrollTop >= display.height * contents.indexOf('team') && display.scrollTop < display.height * contents.indexOf('howMuch')) {
+		$('.supernova').css('position', 'fixed');
+		$('.supernova').css('opacity', '1');
+	}
+
+	else {
+		$('.supernova').css('opacity', '0');
+		setTimeout(function() {
+			$('.supernova').css('position', 'absolute');
+		}, 1000);
+	}
+
 });
 
 /***************************************************************************************************
@@ -249,7 +485,25 @@ function timeline(id) {
 
 	});
 
-	// get rid of "stems" on top and bottom of backbone
+}
+
+function animateTimeline(id, speed) {
+
+	animated[id] = true;
+
+	var entries = $('#' + id).find('.entry');
+	
+	function opacity(i) {
+
+		setTimeout(function() {
+			$(entries[i]).css('opacity', '1');
+		}, speed * i);
+
+	}
+
+	for (var i = 0; i < entries.length; i++) {
+		opacity(i);
+	};
 
 }
 

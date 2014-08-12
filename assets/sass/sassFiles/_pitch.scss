@@ -15,6 +15,14 @@ h3 {
 	font-family: 'Roboto';
 }
 
+a {
+	color: #ccc;
+
+	&:hover {
+		color: #666;
+	}
+}
+
 p.margin {
 	margin-top: 20px;
 }
@@ -40,13 +48,23 @@ p.margin {
 	@include transition(opacity 0.3s ease);
 }
 
+.noPointer {
+	pointer-events: none;
+}
+
 .link {
-	@include animation(animateLink 6s infinite ease);
+	@include animation(animateLink 5s infinite ease);
 	@include transition(transform 0.3s ease);
 	cursor: pointer;
-	
-	&:hover {
-		
+}
+
+@for $i from 1 through 10 {
+	.flash#{$i} {
+		@include animation(flash #{$i}s infinite linear);
+	}
+
+	.delay#{$i} {
+		@include animation-delay(#{$i * 0.5}s);
 	}
 }
 
@@ -91,6 +109,55 @@ body {
 		img, h1 {
 			display: inline-block;
 			vertical-align: middle;
+		}
+	}
+}
+
+.moreMarker {
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#infoPopup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(51, 51, 51, 0.7);
+	z-index: 9999;
+	width: 100%;
+	height: 100%; 
+	@include transition(all 0.3s ease);
+
+	.popCont {
+		position: absolute;
+		width: 500px;
+		height: 260px;
+		padding: 20px;
+		top: 50%;
+		left: 50%;
+		margin-top: -180px;
+		margin-left: -250px;
+		background: white;
+		text-align: center;
+
+		h1 {
+			color: #666
+		}
+
+		p {
+			color: #777;
+			margin: 10px 0 15px 0;
+		}
+
+		button {
+			background: #7FAC9D;
+			border: none;
+			color: white;
+			padding: 10px;
+			margin-top: 5px;
 		}
 	}
 }
@@ -224,6 +291,10 @@ body {
 			bottom: 50px;
 		}
 
+		.col6 {
+			margin-top: -28px;
+		}
+
 		.news {
 			position: relative;
 			bottom: 30px;
@@ -235,9 +306,9 @@ body {
 	.questions {
 		position: absolute;
 		top: 50%;
-		margin-top: -98px;
+		margin-top: -108px;
 		left: 50%;
-		margin-left: -385px;
+		margin-left: -401px;
 
 		.people {
 			display: inline-block;
@@ -254,6 +325,10 @@ body {
 					bottom: 30px;
 				}
 			}
+		}
+
+		.questionMark {
+			@include animation(questionMarks 2s infinite ease);
 		}
 
 		.questionText {
@@ -293,9 +368,26 @@ body {
 		}
 	}
 
+	.solutionImg {
+		width: 100px;
+		margin: 5px 5px;
+	}
+
+	.col5 {
+		margin-top: 15px;
+	}
+
+	.monitor {
+		margin-left: 8px;
+	}
+
 }
 
 #product {
+	.col6 {
+		margin-left: 100px;
+	}
+
 	.laser1 {
 		position: absolute;
 		top: 218px;
@@ -316,32 +408,50 @@ body {
 
 	.wave {
 		position: absolute;
-		top: 165px;
-		right: 60px;
+		top: 145px;
+		right: 10px;
 	}
 
 	.pushDown {
-		margin-top: 90px;
+		margin-top: 70px;
 	}
 
-	.wave3 {
-		margin-right: 25px;
+	.productText {
+ 		margin: 35px auto;
+		width: 600px;
+	}
+}
+
+#product2 {
+	.pushDown {
+		margin-top: 40px;
 	}
 
-	.waveDown {
-		display: block;
-		margin: 20px auto;
-		padding-left: 40px;
+	.productText2 {
+ 		margin: 45px auto;
+		width: 600px;
+	}
+
+	.wave {
+		margin-left: 45px;
 	}
 
 	.productPeople {
-		margin-left: 60px;
+		margin-left: 35px;
 	}
 }
 
 #market {
 	.need {
 		margin-left: 110px;
+	}
+
+	.marketLooper1 img {
+		width: 100%;
+	}
+
+	.need {
+		width: auto !important;
 	}
 }
 
@@ -391,7 +501,8 @@ body {
 		top: 50%;
 		margin-top: -78px;
 		left: 50%;
-		margin-left: -248px;
+		margin-left: -462.5px;
+		width: 925px;
 
 		h1 {
 			font-size: 65px;
@@ -400,6 +511,7 @@ body {
 }
 
 .supernova {
+	@include transition(all 1s ease);
 	width: 810px;
 	position: absolute;
 	top: 50%;
@@ -594,16 +706,10 @@ body {
 	}
 }
 
+// Animations
+
 @-webkit-keyframes animateLink {
 	0% {
-		@include scale(1,1);
-	}
-
-	05% {
-		@include scale(1.05,1.05);
-	}
-
-	10% {
 		@include scale(1,1);
 	}
 
@@ -612,7 +718,7 @@ body {
 	}
 
 	95% {
-		@include scale(1.05,1.05);
+		@include scale(1.04,1.04);
 	}
 
 	100% {
@@ -625,20 +731,12 @@ body {
 		@include scale(1,1);
 	}
 
-	05% {
-		@include scale(1.05,1.05);
-	}
-
-	10% {
-		@include scale(1,1);
-	}
-
 	90% {
 		@include scale(1,1);
 	}
 
 	95% {
-		@include scale(1.05,1.05);
+		@include scale(1.04,1.04);
 	}
 
 	100% {
@@ -651,20 +749,12 @@ body {
 		@include scale(1,1);
 	}
 
-	05% {
-		@include scale(1.05,1.05);
-	}
-
-	10% {
-		@include scale(1,1);
-	}
-
 	90% {
 		@include scale(1,1);
 	}
 
 	95% {
-		@include scale(1.05,1.05);
+		@include scale(1.04,1.04);
 	}
 
 	100% {
@@ -677,24 +767,224 @@ body {
 		@include scale(1,1);
 	}
 
-	05% {
-		@include scale(1.05,1.05);
-	}
-
-	10% {
-		@include scale(1,1);
-	}
-
 	90% {
 		@include scale(1,1);
 	}
 
 	95% {
-		@include scale(1.05,1.05);
+		@include scale(1.04,1.04);
 	}
 
 	100% {
 		@include scale(1,1);
+	}
+}
+
+@-webkit-keyframes questionMarks {
+	0% {
+		@include rotate(0deg);
+	}
+
+	85% {
+		@include rotate(0deg);
+	}
+
+	90% {
+		@include rotate(10deg);
+	}
+
+	95% {
+		@include rotate(-10deg);
+	}
+
+	100% {
+		@include rotate(0deg);
+	}
+}
+
+@-moz-keyframes questionMarks {
+	0% {
+		@include rotate(0deg);
+	}
+
+	85% {
+		@include rotate(0deg);
+	}
+
+	90% {
+		@include rotate(10deg);
+	}
+
+	95% {
+		@include rotate(-10deg);
+	}
+
+	100% {
+		@include rotate(0deg);
+	}
+}
+
+@-o-keyframes questionMarks {
+	0% {
+		@include rotate(0deg);
+	}
+
+	85% {
+		@include rotate(0deg);
+	}
+
+	90% {
+		@include rotate(10deg);
+	}
+
+	95% {
+		@include rotate(-10deg);
+	}
+
+	100% {
+		@include rotate(0deg);
+	}
+}
+
+@keyframes questionMarks {
+	0% {
+		@include rotate(0deg);
+	}
+
+	85% {
+		@include rotate(0deg);
+	}
+
+	90% {
+		@include rotate(10deg);
+	}
+
+	95% {
+		@include rotate(-10deg);
+	}
+
+	100% {
+		@include rotate(0deg);
+	}
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes flash {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes flash {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
 

@@ -1,0 +1,44 @@
+body {
+	background-color: #181D20;
+	margin: 0;
+	padding: 0;
+}
+
+.pass {
+	width: 100%;
+}
+
+.cont {
+	width: 300px;
+ 	margin: 15% auto;
+ 	text-align: center;
+}
+
+h1 {
+	font-family: 'Roboto Slab';
+	color: white;
+	margin: 15px 0;
+}
+
+p {
+	font-family: 'Roboto';
+	color: white;
+}
+
+input[type="password"] {
+	width: 275px;
+	padding: 10px;
+	font-family: 'Roboto';
+	font-size: 14px;
+}
+
+input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	font-family: 'Roboto';
+	font-size: 14px;
+	border: none;
+	background: #7FAC9D;
+	color: white;
+	cursor: pointer;
+}

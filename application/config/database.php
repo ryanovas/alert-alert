@@ -50,13 +50,13 @@ $active_record = TRUE;
 
 // $db['default']['hostname'] = '173.254.28.136';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
+$db['default']['username'] = 'ryanovas_admin';
 $db['default']['password'] = 'MBIGoldey5!@#';
 $db['default']['database'] = 'ryanovas_skywatch';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
-$db['default']['db_debug'] = TRUE;
+$db['default']['db_debug'] = FALSE;
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = '';
 $db['default']['char_set'] = 'utf8';
